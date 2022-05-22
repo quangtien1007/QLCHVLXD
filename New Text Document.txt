@@ -1,0 +1,1 @@
+update mathang set soluong=soluong-1 where mamathang='mh01'

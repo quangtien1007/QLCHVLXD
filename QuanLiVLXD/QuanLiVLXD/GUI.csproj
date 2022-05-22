@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{575C4F4C-B1F0-47F2-BDF3-CF18E5F132DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLiVLXD</RootNamespace>
+    <AssemblyName>QuanLiVLXD</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCTHDXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTHDXuat.Designer.cs">
+      <DependentUpon>frmCTHDXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCTHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTHDNhap.Designer.cs">
+      <DependentUpon>frmCTHDNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoimk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoimk.Designer.cs">
+      <DependentUpon>frmDoimk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHangHoa.Designer.cs">
+      <DependentUpon>frmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiHang.Designer.cs">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapHangg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHangg.Designer.cs">
+      <DependentUpon>frmNhapHangg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanliTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanliTK.Designer.cs">
+      <DependentUpon>frmQuanliTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXuatHang.Designer.cs">
+      <DependentUpon>frmXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCTHDXuat.resx">
+      <DependentUpon>frmCTHDXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTHDNhap.resx">
+      <DependentUpon>frmCTHDNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoimk.resx">
+      <DependentUpon>frmDoimk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHangHoa.resx">
+      <DependentUpon>frmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiHang.resx">
+      <DependentUpon>frmLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHangg.resx">
+      <DependentUpon>frmNhapHangg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanliTK.resx">
+      <DependentUpon>frmQuanliTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTaiKhoan.resx">
+      <DependentUpon>frmTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXuatHang.resx">
+      <DependentUpon>frmXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\189-1894796_cathay-life-việt-nam-mở-3-văn-phòng-kinh-doanh-mới-cathay-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\64f3d30c41af8af1d3be.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\64f3d30c41af8sehaf1d3be.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\adjust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\c41af8sehaf1d3be.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\coin-dollar-2534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\Cty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\enter %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\garbage-bin-10420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-close-window-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-contact-details-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-manager-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-man-with-money-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-name-tag-woman-horizontal-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-people-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-service-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\icons8-signing-a-document-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\images-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\kisspng-cathay-financial-holding-co-ltd-cathay-life-insu-5ae2cb84b8cf52.086449961524812676757.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\logo_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\power-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\printer-5836.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\recruitment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\switch-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\Thiết kế không tên %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\Thiết kế không tên %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\Thiết kế không tên %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\vlxd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hinhh\x-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{67348965-441a-48cd-9253-8b6935f27865}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{2bf11952-5941-414a-899a-d40314a50867}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{118be465-5ae7-48b4-80a9-e4d34d55a844}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
