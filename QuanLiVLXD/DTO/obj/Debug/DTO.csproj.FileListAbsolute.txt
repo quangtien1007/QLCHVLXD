@@ -10,3 +10,9 @@ D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DTO\obj\Debug\DTO.csprojAssemblyReference.ca
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DTO\obj\Debug\DTO.dll
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DTO\obj\Debug\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\bin\Debug\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\bin\Debug\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Debug\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Debug\DTO.pdb

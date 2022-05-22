@@ -16,3 +16,12 @@ D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.c
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DAO\obj\Debug\DAO.dll
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\DAO\obj\Debug\DAO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Debug\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Debug\DAO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Debug\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Debug\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Debug\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Debug\DAO.pdb

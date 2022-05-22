@@ -67,7 +67,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(245, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(365, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,6 +175,7 @@
             this.khoToolStripMenuItem.Name = "khoToolStripMenuItem";
             this.khoToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.khoToolStripMenuItem.Text = "Kho";
+            this.khoToolStripMenuItem.Click += new System.EventHandler(this.khoToolStripMenuItem_Click);
             // 
             // menuKhachHang
             // 
@@ -212,7 +213,7 @@
             this.panelCentral.Controls.Add(this.statusStrip1);
             this.panelCentral.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelCentral.Location = new System.Drawing.Point(0, 28);
-            this.panelCentral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCentral.Margin = new System.Windows.Forms.Padding(4);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(1924, 975);
             this.panelCentral.TabIndex = 28;
@@ -223,7 +224,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sttTTTaiKhoan,
             this.sttTTThoiGian});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 944);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 945);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1924, 30);
@@ -257,7 +258,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "Quản lý vật liệu xây dựng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

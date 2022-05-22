@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="BUS_CTHDX.cs" />
     <Compile Include="BUS_HangHoa.cs" />
+    <Compile Include="BUS_HDNHAP.cs" />
     <Compile Include="BUS_HDXUAT.cs" />
     <Compile Include="BUS_KhachHang.cs" />
-    <Compile Include="BUS_MatHang.cs" />
+    <Compile Include="BUS_Kho.cs" />
+    <Compile Include="BUS_LoaiHang.cs" />
     <Compile Include="BUS_NCC.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />

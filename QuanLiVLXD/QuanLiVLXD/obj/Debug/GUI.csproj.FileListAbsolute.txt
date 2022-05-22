@@ -50,3 +50,33 @@ D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmHangHoa.r
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmNhapHangg.resources
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmXuatHang.resources
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmCTHDXuat.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\QuanLiVLXD.exe.config
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\QuanLiVLXD.exe
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\QuanLiVLXD.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\BUS.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\BUS.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\DAO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmCTHDXuat.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmCTHDNhap.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDangNhap.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDoimk.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmHangHoa.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmKhachHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmLoaiHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmMain.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmNhaCungCap.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmNhapHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmQuanliTK.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmTaoTaiKhoan.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmXuatHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.Properties.Resources.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\GUI.csproj.CopyComplete
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.exe
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmKho.resources

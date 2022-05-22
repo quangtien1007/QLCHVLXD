@@ -81,7 +81,7 @@ namespace QuanLiVLXD
                 sttTTTaiKhoan.Text = "Chưa đăng nhập";
                 sttTTThoiGian.Text = "";
 
-                menuNhapHang.Enabled = false;
+                //menuNhapHang.Enabled = false;
                 menuQLTK.Enabled = false;
                 menuDoiMK.Enabled = false;
                 menuDanhMuc.Enabled = false;
@@ -170,6 +170,11 @@ namespace QuanLiVLXD
         private void menuGiaoHang_Click(object sender, EventArgs e)
         {
             MoForm(new frmXuatHang());
+        }
+
+        private void khoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmKho());
         }
     }
 }

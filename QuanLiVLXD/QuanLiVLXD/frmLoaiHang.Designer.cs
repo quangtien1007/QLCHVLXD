@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gbKH = new System.Windows.Forms.GroupBox();
-            this.txtDienThoai = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtTrangThai = new System.Windows.Forms.TextBox();
+            this.txtDienGiai = new System.Windows.Forms.TextBox();
             this.txtTenLoai = new System.Windows.Forms.TextBox();
             this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,23 +41,23 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.dtgvNCC = new System.Windows.Forms.DataGridView();
+            this.dgDSLH = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdTen = new System.Windows.Forms.RadioButton();
+            this.rdMa = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
-            this.rdMa = new System.Windows.Forms.RadioButton();
-            this.rdTen = new System.Windows.Forms.RadioButton();
             this.gbKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvNCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDSLH)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbKH
             // 
-            this.gbKH.Controls.Add(this.txtDienThoai);
-            this.gbKH.Controls.Add(this.txtDiaChi);
+            this.gbKH.Controls.Add(this.txtTrangThai);
+            this.gbKH.Controls.Add(this.txtDienGiai);
             this.gbKH.Controls.Add(this.txtTenLoai);
             this.gbKH.Controls.Add(this.txtMaLoai);
             this.gbKH.Controls.Add(this.label4);
@@ -65,28 +65,28 @@
             this.gbKH.Controls.Add(this.label2);
             this.gbKH.Controls.Add(this.label1);
             this.gbKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbKH.Location = new System.Drawing.Point(85, 63);
+            this.gbKH.Location = new System.Drawing.Point(128, 60);
             this.gbKH.Name = "gbKH";
             this.gbKH.Size = new System.Drawing.Size(680, 231);
             this.gbKH.TabIndex = 7;
             this.gbKH.TabStop = false;
             this.gbKH.Text = "Thông tin khách hàng";
             // 
-            // txtDienThoai
+            // txtTrangThai
             // 
-            this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienThoai.Location = new System.Drawing.Point(217, 183);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(422, 29);
-            this.txtDienThoai.TabIndex = 1;
+            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangThai.Location = new System.Drawing.Point(217, 183);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(422, 29);
+            this.txtTrangThai.TabIndex = 1;
             // 
-            // txtDiaChi
+            // txtDienGiai
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(217, 139);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(422, 29);
-            this.txtDiaChi.TabIndex = 1;
+            this.txtDienGiai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDienGiai.Location = new System.Drawing.Point(217, 139);
+            this.txtDienGiai.Name = "txtDienGiai";
+            this.txtDienGiai.Size = new System.Drawing.Size(422, 29);
+            this.txtDienGiai.TabIndex = 1;
             // 
             // txtTenLoai
             // 
@@ -150,7 +150,7 @@
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(821, 72);
+            this.groupBox1.Location = new System.Drawing.Point(864, 69);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(183, 222);
             this.groupBox1.TabIndex = 9;
@@ -166,6 +166,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -176,6 +177,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -186,21 +188,23 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // dtgvNCC
+            // dgDSLH
             // 
-            this.dtgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNCC.Location = new System.Drawing.Point(85, 377);
-            this.dtgvNCC.Name = "dtgvNCC";
-            this.dtgvNCC.Size = new System.Drawing.Size(919, 204);
-            this.dtgvNCC.TabIndex = 10;
+            this.dgDSLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDSLH.Location = new System.Drawing.Point(128, 374);
+            this.dgDSLH.Name = "dgDSLH";
+            this.dgDSLH.Size = new System.Drawing.Size(919, 204);
+            this.dgDSLH.TabIndex = 10;
+            this.dgDSLH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSLH_CellClick);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(419, 15);
+            this.label5.Location = new System.Drawing.Point(462, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(453, 42);
             this.label5.TabIndex = 8;
@@ -213,12 +217,34 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(85, 300);
+            this.groupBox2.Location = new System.Drawing.Point(128, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(919, 71);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
+            // 
+            // rdTen
+            // 
+            this.rdTen.AutoSize = true;
+            this.rdTen.Location = new System.Drawing.Point(762, 30);
+            this.rdTen.Name = "rdTen";
+            this.rdTen.Size = new System.Drawing.Size(90, 24);
+            this.rdTen.TabIndex = 1;
+            this.rdTen.TabStop = true;
+            this.rdTen.Text = "Theo tên";
+            this.rdTen.UseVisualStyleBackColor = true;
+            // 
+            // rdMa
+            // 
+            this.rdMa.AutoSize = true;
+            this.rdMa.Location = new System.Drawing.Point(637, 30);
+            this.rdMa.Name = "rdMa";
+            this.rdMa.Size = new System.Drawing.Size(89, 24);
+            this.rdMa.TabIndex = 1;
+            this.rdMa.TabStop = true;
+            this.rdMa.Text = "Theo mã";
+            this.rdMa.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -239,28 +265,6 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
-            // rdMa
-            // 
-            this.rdMa.AutoSize = true;
-            this.rdMa.Location = new System.Drawing.Point(637, 30);
-            this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(89, 24);
-            this.rdMa.TabIndex = 1;
-            this.rdMa.TabStop = true;
-            this.rdMa.Text = "Theo mã";
-            this.rdMa.UseVisualStyleBackColor = true;
-            // 
-            // rdTen
-            // 
-            this.rdTen.AutoSize = true;
-            this.rdTen.Location = new System.Drawing.Point(762, 30);
-            this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(90, 24);
-            this.rdTen.TabIndex = 1;
-            this.rdTen.TabStop = true;
-            this.rdTen.Text = "Theo tên";
-            this.rdTen.UseVisualStyleBackColor = true;
-            // 
             // frmLoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,16 +274,17 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbKH);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dtgvNCC);
+            this.Controls.Add(this.dgDSLH);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(0, 28);
             this.Name = "frmLoaiHang";
             this.Text = "Loại hàng";
+            this.Load += new System.EventHandler(this.frmLoaiHang_Load);
             this.gbKH.ResumeLayout(false);
             this.gbKH.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvNCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDSLH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -290,8 +295,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbKH;
-        private System.Windows.Forms.TextBox txtDienThoai;
-        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtDienGiai;
         private System.Windows.Forms.TextBox txtTenLoai;
         private System.Windows.Forms.TextBox txtMaLoai;
         private System.Windows.Forms.Label label4;
@@ -302,12 +306,13 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridView dtgvNCC;
+        private System.Windows.Forms.DataGridView dgDSLH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdTen;
         private System.Windows.Forms.RadioButton rdMa;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnTim;
+        public System.Windows.Forms.TextBox txtTrangThai;
     }
 }

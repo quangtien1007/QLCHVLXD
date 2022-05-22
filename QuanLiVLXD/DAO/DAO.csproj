@@ -43,13 +43,15 @@
   <ItemGroup>
     <Compile Include="DAO_CTHDXUAT.cs" />
     <Compile Include="DAO_HangHoa.cs" />
+    <Compile Include="DAO_HDNHAP.cs" />
     <Compile Include="DAO_HDXUAT.cs" />
     <Compile Include="DAO_KhachHang.cs" />
-    <Compile Include="DAO_MatHang.cs" />
+    <Compile Include="DAO_Kho.cs" />
     <Compile Include="DAO_NCC.cs" />
     <Compile Include="DAO_NhanVien.cs" />
     <Compile Include="DAO_TaiKhoan.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DAO_LoaiHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -20,3 +20,14 @@ D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.c
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\BUS\obj\Debug\BUS.dll
 D:\LTQL\ĐỒ ÁN - 2022\QuanLiVLXD\BUS\obj\Debug\BUS.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\BUS.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\BUS.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\DAO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\bin\Debug\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\obj\Debug\BUS.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\BUS\obj\Debug\BUS.pdb

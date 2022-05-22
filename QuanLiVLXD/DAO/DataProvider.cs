@@ -12,7 +12,7 @@ namespace DAO
     {
         public static SqlConnection MoKetNoi()
         {
-            string s = @"Data Source=TIEN-PC\SQLEXPRESS;Initial Catalog=QLCHVLXD;Integrated Security=True";
+            string s = @"Data Source=TIEN-PC\SQLEXPRESS;Initial Catalog=QLCHVLXD1;Integrated Security=True";
             SqlConnection KetNoi = new SqlConnection(s);
             KetNoi.Open();
             return KetNoi;

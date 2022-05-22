@@ -47,9 +47,11 @@
     <Compile Include="DTO_HangHoa.cs" />
     <Compile Include="DTO_HDXUAT.cs" />
     <Compile Include="DTO_KhachHang.cs" />
-    <Compile Include="DTO_MatHang.cs" />
+    <Compile Include="DTO_Kho.cs" />
+    <Compile Include="DTO_LoaiHang.cs" />
     <Compile Include="DTO_NCC.cs" />
     <Compile Include="DTO_NhanVien.cs" />
+    <Compile Include="DTO_HDNHAP.cs" />
     <Compile Include="DTO_TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
