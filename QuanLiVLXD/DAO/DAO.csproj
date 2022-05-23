@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO_BCXuat.cs" />
     <Compile Include="DAO_CTHDXUAT.cs" />
     <Compile Include="DAO_HangHoa.cs" />
     <Compile Include="DAO_HDNHAP.cs" />

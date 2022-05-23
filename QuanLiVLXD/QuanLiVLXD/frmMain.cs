@@ -39,6 +39,15 @@ namespace QuanLiVLXD
             Formmoi.BringToFront();
             Formmoi.Show();
         }
+        public void MoFormMain(Form FormMoi)
+        {
+            if (HienThiForm != null)
+            {
+                HienThiForm.Close();
+            }
+            HienThiForm = FormMoi;
+            FormMoi.Show();
+        }
         private void menuDoiMK_Click(object sender, EventArgs e)
         {
             frmDoimk d = new frmDoimk();
@@ -83,7 +92,7 @@ namespace QuanLiVLXD
 
                 //menuNhapHang.Enabled = false;
                 menuQLTK.Enabled = false;
-                menuDoiMK.Enabled = false;
+                //menuDoiMK.Enabled = false;
             }
             else
             {
@@ -101,7 +110,7 @@ namespace QuanLiVLXD
                     case 1: // quản trị
                         menuNhapHang.Enabled = true;
                         menuGiaoHang.Enabled = true;
-                        menuDoiMK.Visible = false;
+                        menuDoiMK.Enabled = true;
                         menuQLTK.Enabled = true;
                         menuDangXuat.Enabled = true;
                         break;
@@ -123,15 +132,15 @@ namespace QuanLiVLXD
 
         private void menuDangXuat_Click(object sender, EventArgs e)
         {
+            //frmMain n = new frmMain();
+            //n.ShowDialog();
+            MoFormMain(new frmMain());
             // Đóng các form đang mở (nếu có)
-            /*foreach (Form f in this.MdiChildren)
-            {
-                if (!f.IsDisposed)
-                    f.Close();
-            }*/
-  
-            frmMain m = new frmMain();
-            m.Show();
+            //foreach (Form f in this.MdiChildren)
+            //{
+            //if (!f.IsDisposed)
+            //f.Close();
+            //}
             // Gán lại trạng thái đăng nhập = false
             bDangNhap = false;
             HienThiMenu();

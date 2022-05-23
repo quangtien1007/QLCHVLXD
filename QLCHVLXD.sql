@@ -1,6 +1,6 @@
-﻿CREATE DATABASE QLCHVLXD
+﻿CREATE DATABASE QLCHVLXD1
 GO
-use QLCHVLXD
+use QLCHVLXD1
 GO
 
 CREATE TABLE KHACHHANG
@@ -25,7 +25,7 @@ CREATE TABLE LOAIHANG
 	MALOAI VARCHAR(15) PRIMARY KEY,
 	TENLOAI NVARCHAR(50),
 	DIENGIAI NVARCHAR(50),
-	FLAG INT
+	TRANGTHAI NVARCHAR(50)
 )
 GO
 
@@ -144,16 +144,17 @@ select * from NHANVIEN
 
 
 INSERT INTO LOAIHANG VALUES
-('Ton',N'Tôn',N'Tôn gồm: Tôn lạnh, nóng',1),
-('Thep',N'Thép',N'Thép gồm: Tôn phi, cuộn',1),
-('Gach',N'Gạch',N'Gạch gồm: Gạch thẻ, ống, men',1),
-('Da',N'Đá',N'Đá gồm: Đá 1x2,2x3,4x6',1),
-('XM',N'Xi măng',N'Xi măng gồm: Xi măng PCB,xi măng Hà Tiên',1),
-('Nhom',N'Nhôm',N'Nhôm gồm: Nhôm thanh, nhôm uốn',1),
-('Cat',N'Cát',N'Cát gồm: Cát mịn, nền',1),
-('Kem',N'Kẽm',N'Kẽm gồm: Kẽm phi, cuộn ly',1)
+('Ton',N'Tôn',N'Tôn gồm: Tôn lạnh, nóng','Còn kinh doanh'),
+('Thep',N'Thép',N'Thép gồm: Tôn phi, cuộn','Còn kinh doanh'),
+('Gach',N'Gạch',N'Gạch gồm: Gạch thẻ, ống, men','Còn kinh doanh'),
+('Da',N'Đá',N'Đá gồm: Đá 1x2,2x3,4x6','Còn kinh doanh'),
+('XM',N'Xi măng',N'Xi măng gồm: Xi măng PCB,xi măng Hà Tiên','Còn kinh doanh'),
+('Nhom',N'Nhôm',N'Nhôm gồm: Nhôm thanh, nhôm uốn','Còn kinh doanh'),
+('Cat',N'Cát',N'Cát gồm: Cát mịn, nền','Còn kinh doanh'),
+('Kem',N'Kẽm',N'Kẽm gồm: Kẽm phi, cuộn ly','Còn kinh doanh')
 select * from LOAIHANG
 
+drop table HANGHOA
 
 INSERT INTO HANGHOA VALUES
 ('TON01','Ton',N'Tôn lạnh',N'Tấm',N'Việt Nam'),
@@ -197,7 +198,14 @@ INSERT INTO HOADON_XUAT VALUES
 ('HD00003','KH0002','NV0003','3/9/2021',1)
 SELECT * FROM HOADON_XUAT
 
-SELECT * FROM KHO
+INSERT INTO HOADON_NHAP VALUES
+('HDN0001','NCC00001','NV0003','9/27/2020',1),
+('HDN0002','NCC00003','NV0006','3/5/2020',1),
+('HDN0003','NCC00004','NV0004','5/12/2020',1),
+('HDN0004','NCC00001','NV0005','2/25/2020',1)
+SELECT * FROM CT_HOADON_XUAT
+
+SELECT * FROM NHANVIEN
 INSERT INTO KHO VALUES
 (1,'TON01',14000),
 (2,'TON02',10000),
@@ -234,3 +242,19 @@ AS
 END
 DROP FUNCTION XEM_TENNV
 SELECT DBO.XEM_TENNV('NV0002');
+
+select n.SO_HD_NHAP,n.MANCC,n.MANV,n.NGAYLAP_NHAP,m.TENNCC,v.TENNV from HOADON_NHAP n, NHACUNGCAP m, NHANVIEN v where n.MANCC=m.MANCC and n.MANV=v.MANV
+select * from nhacungcap
+private string LoaiHang;
+        private string TenHang;
+        private string DVT;
+        private int SoLuongKho;
+        private string XuatXu;
+        private string MaHH;
+        private int IDKho;
+SELECT h.TENHH,h.DONVITINH,h.XUATXU,k.SOLUONG from HANGHOA h, KHO k where h.MAHH=k.MAHH
+drop table LOAIHANG1
+select * from KHO
+
+
+
