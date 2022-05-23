@@ -22,13 +22,15 @@ namespace QuanLiVLXD
         public void SetHeaderText()
         {
             dgKho.Columns["TenHang1"].HeaderText = "Tên hàng hóa";
-            dgKho.Columns["TenHang1"].Width = 350;
+            dgKho.Columns["TenHang1"].Width = 300;
             dgKho.Columns["DVT1"].HeaderText = "Đơn vị tính";
-            dgKho.Columns["DVT1"].Width = 400;
+            dgKho.Columns["DVT1"].Width = 350;
             dgKho.Columns["SoLuongKho1"].HeaderText = "Số lượng";
-            dgKho.Columns["SoLuongKho1"].Width = 400;
+            dgKho.Columns["SoLuongKho1"].Width = 350;
+            dgKho.Columns["MaLoai1"].HeaderText = "Mã loại";
+            dgKho.Columns["MaLoai1"].Width = 190;
             dgKho.Columns["XuatXu1"].HeaderText = "Xuất xứ";
-            dgKho.Columns["XuatXu1"].Width = 340;
+            dgKho.Columns["XuatXu1"].Width = 300;
 
         }
         private void HienThiLenDataGrid()

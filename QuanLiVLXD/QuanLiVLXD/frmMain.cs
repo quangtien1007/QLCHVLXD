@@ -84,8 +84,6 @@ namespace QuanLiVLXD
                 //menuNhapHang.Enabled = false;
                 menuQLTK.Enabled = false;
                 menuDoiMK.Enabled = false;
-                menuDanhMuc.Enabled = false;
-                menuBanHang.Enabled = false;
             }
             else
             {
@@ -108,8 +106,6 @@ namespace QuanLiVLXD
                         menuDangXuat.Enabled = true;
                         break;
                     case 2: // nhân viên
-                        menuBanHang.Enabled = true;
-                        menuDanhMuc.Enabled = false;
                         menuDoiMK.Enabled = true;
                         break;
                     default:
@@ -175,6 +171,41 @@ namespace QuanLiVLXD
         private void khoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MoForm(new frmKho());
+        }
+
+        private void menuBCK_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmBaoCaoKho());
+        }
+
+        private void menuBCN_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmBaoCaoNhapHang());
+        }
+
+        private void menuBCX_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmBaoCaoXuatHang());
+        }
+
+        private void menuDSKH_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmDSKH());
+        }
+
+        private void menuDSNCC_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmDSNCC());
+        }
+
+        private void menuDSLH_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmDSLH());
+        }
+
+        private void menuDSHH_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmDSHH());
         }
     }
 }

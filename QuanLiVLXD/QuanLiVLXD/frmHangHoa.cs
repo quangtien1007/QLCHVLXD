@@ -39,7 +39,7 @@ namespace QuanLiVLXD
         }
         private void HienThiLenCombobox()
         {
-            List<DTO_HangHoa> lstHangHoa = BUS_HangHoa.LayHH();
+            List<DTO_LoaiHang> lstHangHoa = BUS_LoaiHang.LayLH();
             cbMaLoai.DataSource = lstHangHoa;
             cbMaLoai.DisplayMember = "MaLoai1";
             cbMaLoai.ValueMember = "MaLoai1";

@@ -96,7 +96,7 @@
             this.groupBox2.Controls.Add(this.txtTim);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(124, 319);
+            this.groupBox2.Location = new System.Drawing.Point(125, 295);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(919, 71);
             this.groupBox2.TabIndex = 17;
@@ -154,7 +154,7 @@
             this.gbKH.Controls.Add(this.label3);
             this.gbKH.Controls.Add(this.label1);
             this.gbKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbKH.Location = new System.Drawing.Point(124, 82);
+            this.gbKH.Location = new System.Drawing.Point(125, 53);
             this.gbKH.Name = "gbKH";
             this.gbKH.Size = new System.Drawing.Size(680, 231);
             this.gbKH.TabIndex = 13;
@@ -237,9 +237,9 @@
             // dgDSHDN
             // 
             this.dgDSHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDSHDN.Location = new System.Drawing.Point(124, 396);
+            this.dgDSHDN.Location = new System.Drawing.Point(125, 372);
             this.dgDSHDN.Name = "dgDSHDN";
-            this.dgDSHDN.Size = new System.Drawing.Size(919, 186);
+            this.dgDSHDN.Size = new System.Drawing.Size(919, 192);
             this.dgDSHDN.TabIndex = 16;
             // 
             // label5
@@ -247,7 +247,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(452, 37);
+            this.label5.Location = new System.Drawing.Point(443, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(542, 42);
             this.label5.TabIndex = 14;
@@ -260,7 +260,7 @@
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(860, 91);
+            this.groupBox1.Location = new System.Drawing.Point(861, 53);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(183, 222);
             this.groupBox1.TabIndex = 15;

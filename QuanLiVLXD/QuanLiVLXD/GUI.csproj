@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBaoCaoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoKho.Designer.cs">
+      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoNhapHang.Designer.cs">
+      <DependentUpon>frmBaoCaoNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoXuatHang.Designer.cs">
+      <DependentUpon>frmBaoCaoXuatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCTHDXuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +87,30 @@
     </Compile>
     <Compile Include="frmDoimk.Designer.cs">
       <DependentUpon>frmDoimk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSHH.Designer.cs">
+      <DependentUpon>frmDSHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSKH.Designer.cs">
+      <DependentUpon>frmDSKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSLH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSLH.Designer.cs">
+      <DependentUpon>frmDSLH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSNCC.Designer.cs">
+      <DependentUpon>frmDSNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHangHoa.cs">
       <SubType>Form</SubType>
@@ -132,6 +174,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBaoCaoKho.resx">
+      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoNhapHang.resx">
+      <DependentUpon>frmBaoCaoNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoXuatHang.resx">
+      <DependentUpon>frmBaoCaoXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCTHDXuat.resx">
       <DependentUpon>frmCTHDXuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +194,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoimk.resx">
       <DependentUpon>frmDoimk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSHH.resx">
+      <DependentUpon>frmDSHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSKH.resx">
+      <DependentUpon>frmDSKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSLH.resx">
+      <DependentUpon>frmDSLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSNCC.resx">
+      <DependentUpon>frmDSNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHangHoa.resx">
       <DependentUpon>frmHangHoa.cs</DependentUpon>

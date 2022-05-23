@@ -59,9 +59,10 @@
             // rdTen
             // 
             this.rdTen.AutoSize = true;
+            this.rdTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdTen.Location = new System.Drawing.Point(762, 30);
             this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(90, 24);
+            this.rdTen.Size = new System.Drawing.Size(104, 28);
             this.rdTen.TabIndex = 1;
             this.rdTen.TabStop = true;
             this.rdTen.Text = "Theo tên";
@@ -70,9 +71,10 @@
             // rdMa
             // 
             this.rdMa.AutoSize = true;
+            this.rdMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdMa.Location = new System.Drawing.Point(637, 30);
             this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(89, 24);
+            this.rdMa.Size = new System.Drawing.Size(104, 28);
             this.rdMa.TabIndex = 1;
             this.rdMa.TabStop = true;
             this.rdMa.Text = "Theo mã";
@@ -80,7 +82,7 @@
             // 
             // btnTim
             // 
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Location = new System.Drawing.Point(483, 25);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(88, 35);
@@ -94,7 +96,7 @@
             this.groupBox2.Controls.Add(this.rdMa);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.btnTim);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(125, 295);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(919, 71);
@@ -104,7 +106,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(14, 29);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -123,7 +125,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(53, 169);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(85, 39);
@@ -134,7 +136,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(53, 97);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 39);
@@ -145,7 +147,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(53, 38);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(85, 39);
@@ -293,7 +295,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1876, 857);
+            this.ClientSize = new System.Drawing.Size(1908, 935);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgDSHH);
             this.Controls.Add(this.groupBox1);

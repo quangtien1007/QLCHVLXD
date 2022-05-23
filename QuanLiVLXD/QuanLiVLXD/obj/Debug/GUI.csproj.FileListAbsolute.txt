@@ -80,3 +80,10 @@ D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\GUI.csproj.CopyComplet
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.exe
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.pdb
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmKho.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmBaoCaoKho.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmBaoCaoNhapHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmBaoCaoXuatHang.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSHH.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSKH.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSLH.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSNCC.resources

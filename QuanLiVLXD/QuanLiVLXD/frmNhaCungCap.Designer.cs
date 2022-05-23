@@ -65,7 +65,7 @@
             this.gbKH.Controls.Add(this.label2);
             this.gbKH.Controls.Add(this.label1);
             this.gbKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbKH.Location = new System.Drawing.Point(118, 77);
+            this.gbKH.Location = new System.Drawing.Point(125, 53);
             this.gbKH.Name = "gbKH";
             this.gbKH.Size = new System.Drawing.Size(680, 231);
             this.gbKH.TabIndex = 3;
@@ -150,9 +150,9 @@
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(854, 86);
+            this.groupBox1.Location = new System.Drawing.Point(861, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 222);
+            this.groupBox1.Size = new System.Drawing.Size(183, 231);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
@@ -193,10 +193,10 @@
             // dgDSNCC
             // 
             this.dgDSNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDSNCC.Location = new System.Drawing.Point(118, 391);
+            this.dgDSNCC.Location = new System.Drawing.Point(125, 372);
             this.dgDSNCC.Name = "dgDSNCC";
             this.dgDSNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDSNCC.Size = new System.Drawing.Size(919, 186);
+            this.dgDSNCC.Size = new System.Drawing.Size(919, 192);
             this.dgDSNCC.TabIndex = 6;
             this.dgDSNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSNCC_CellClick);
             // 
@@ -205,7 +205,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(446, 32);
+            this.label5.Location = new System.Drawing.Point(443, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(540, 42);
             this.label5.TabIndex = 4;
@@ -218,7 +218,7 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(118, 314);
+            this.groupBox2.Location = new System.Drawing.Point(125, 295);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(919, 71);
             this.groupBox2.TabIndex = 12;

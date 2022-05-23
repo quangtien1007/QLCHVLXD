@@ -67,13 +67,13 @@ namespace QuanLiVLXD
             // Kiểm tra mã loại hàng có độ dài chuỗi hợp lệ hay không
             if (txtMaLoai.Text.Length > 8)
             {
-                MessageBox.Show("Mã khách hàng tối đa 8 ký tự!");
+                MessageBox.Show("Mã loại hàng tối đa 8 ký tự!");
                 return;
             }
             // Kiểm tra mã khách hàng có bị trùng không
             if (BUS_LoaiHang.TimLoaiHangTheoMa(txtMaLoai.Text) != null)
             {
-                MessageBox.Show("Mã khách hàng đã tồn tại! Vui lòng chọn mã khác.");
+                MessageBox.Show("Mã loại hàng đã tồn tại! Vui lòng chọn mã khác.");
                 return;
             }
             // Gán dữ liệu vào kiểu DTO_KhachHang
@@ -89,7 +89,7 @@ namespace QuanLiVLXD
                 return;
             }
             HienThiLenDataGrid();
-            MessageBox.Show("Đã thêm khách hàng.");
+            MessageBox.Show("Đã thêm loại hàng.");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace QuanLiVLXD
             // Kiểm tra mã loại hàng có độ dài chuỗi hợp lệ hay không
             if (txtMaLoai.Text.Length > 8)
             {
-                MessageBox.Show("Mã khách hàng tối đa 8 ký tự!");
+                MessageBox.Show("Mã loại hàng tối đa 8 ký tự!");
                 return;
             }
             // Kiểm tra mã khách hàng có bị trùng không
@@ -125,7 +125,7 @@ namespace QuanLiVLXD
                 return;
             }
             HienThiLenDataGrid();
-            MessageBox.Show("Đã sửa khách hàng.");
+            MessageBox.Show("Đã sửa loại hàng.");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

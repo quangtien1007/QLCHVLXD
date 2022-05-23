@@ -393,19 +393,19 @@
             this.gbKH.TabStop = false;
             this.gbKH.Text = "Cập nhật chi tiết hóa đơn nhập";
             // 
-            // frmCTHDXuat
+            // frmCTHDNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1876, 857);
+            this.ClientSize = new System.Drawing.Size(1908, 935);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgDSCTHDX);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbKH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCTHDXuat";
+            this.Name = "frmCTHDNhap";
             this.Text = "frmCTHDXuat";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

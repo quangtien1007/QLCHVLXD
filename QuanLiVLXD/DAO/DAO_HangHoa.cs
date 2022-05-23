@@ -39,7 +39,7 @@ namespace DAO
         public static bool ThemHangHoa(DTO_HangHoa hh)
         {
             string sTruyVan = string.Format(@"INSERT INTO HANGHOA VALUES(N'{0}',
-                N'{1}',N'{2}',N'{3}','{4}')", hh.MaHH1, hh.MaLoai1, hh.TenHH1, hh.DVT1, hh.XuatXu1);
+                N'{1}',N'{2}',N'{3}',N'{4}')", hh.MaHH1, hh.MaLoai1, hh.TenHH1, hh.DVT1, hh.XuatXu1);
             con = DataProvider.MoKetNoi();
             bool kq = DataProvider.TruyVanKhongLayDuLieu(sTruyVan, con);
             DataProvider.DongKetNoi(con);

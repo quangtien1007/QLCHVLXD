@@ -92,7 +92,7 @@
             this.gbKH.Controls.Add(this.label3);
             this.gbKH.Controls.Add(this.label1);
             this.gbKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbKH.Location = new System.Drawing.Point(119, 73);
+            this.gbKH.Location = new System.Drawing.Point(125, 53);
             this.gbKH.Name = "gbKH";
             this.gbKH.Size = new System.Drawing.Size(680, 231);
             this.gbKH.TabIndex = 18;
@@ -150,10 +150,10 @@
             // dgDSHDX
             // 
             this.dgDSHDX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDSHDX.Location = new System.Drawing.Point(119, 387);
+            this.dgDSHDX.Location = new System.Drawing.Point(125, 372);
             this.dgDSHDX.Name = "dgDSHDX";
             this.dgDSHDX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDSHDX.Size = new System.Drawing.Size(919, 186);
+            this.dgDSHDX.Size = new System.Drawing.Size(919, 192);
             this.dgDSHDX.TabIndex = 21;
             this.dgDSHDX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSHDX_CellClick);
             // 
@@ -162,7 +162,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(447, 28);
+            this.label5.Location = new System.Drawing.Point(443, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(538, 42);
             this.label5.TabIndex = 19;
@@ -175,7 +175,7 @@
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(855, 82);
+            this.groupBox1.Location = new System.Drawing.Point(861, 53);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(183, 222);
             this.groupBox1.TabIndex = 20;
@@ -226,7 +226,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(14, 29);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -239,8 +239,8 @@
             this.groupBox2.Controls.Add(this.rdMa);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.btnTim);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(119, 310);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(125, 295);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(919, 71);
             this.groupBox2.TabIndex = 22;
@@ -250,9 +250,10 @@
             // rdTen
             // 
             this.rdTen.AutoSize = true;
+            this.rdTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdTen.Location = new System.Drawing.Point(762, 30);
             this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(90, 24);
+            this.rdTen.Size = new System.Drawing.Size(104, 28);
             this.rdTen.TabIndex = 1;
             this.rdTen.TabStop = true;
             this.rdTen.Text = "Theo tên";
@@ -261,9 +262,10 @@
             // rdMa
             // 
             this.rdMa.AutoSize = true;
+            this.rdMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdMa.Location = new System.Drawing.Point(637, 30);
             this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(89, 24);
+            this.rdMa.Size = new System.Drawing.Size(104, 28);
             this.rdMa.TabIndex = 1;
             this.rdMa.TabStop = true;
             this.rdMa.Text = "Theo mã";
@@ -271,7 +273,7 @@
             // 
             // btnTim
             // 
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Location = new System.Drawing.Point(483, 25);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(88, 35);
@@ -284,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1876, 857);
+            this.ClientSize = new System.Drawing.Size(1908, 935);
             this.Controls.Add(this.gbKH);
             this.Controls.Add(this.dgDSHDX);
             this.Controls.Add(this.label5);
