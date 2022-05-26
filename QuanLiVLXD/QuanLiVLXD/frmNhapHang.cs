@@ -59,9 +59,9 @@ namespace QuanLiVLXD
         }
         private void HienThiLenCombobox()
         {
-            List<DTO_NCC> lstNCC = BUS_NCC.LayNCC();
-            cbNCC.DataSource = lstNCC;
-            cbNCC.DisplayMember = "TenNCC1";
+            List<DTO_NCC> lstHDNhap = BUS_NCC.LayNCC();
+            cbNCC.DataSource = lstHDNhap;
+            cbNCC.DisplayMember = "MaNCC1";
             cbNCC.ValueMember = "MaNCC1";
         }
 
@@ -86,11 +86,13 @@ namespace QuanLiVLXD
                 return;
             }
             // Gán dữ liệu vào kiểu DTO_KhachHang
+            string nbd = dtpNgayLap.Value.ToString("yyyy/MM/dd");
             DTO_HDNHAP hdn = new DTO_HDNHAP();
             hdn.SoHDNhap1 = txtSoHD.Text;
-            hdn.MaNCC1 = cbNCC.SelectedValue.ToString();
+            hdn.MaNCC1 = cbNCC.Text;
             hdn.MaNV1 = txtNV.Text;
-            hdn.NgayLap1 = dtpNgayLap.Text;
+            hdn.NgayLap1 = nbd;
+            hdn.Flag1 = 1;
             // Thực hiện thêm
             if (BUS_HDNHAP.ThemHDN(hdn) == false)
             {
@@ -105,8 +107,97 @@ namespace QuanLiVLXD
         {
             HienThiLenDataGrid(); ;
             ColorDataGrid();
-            HienThiLenCombobox();
             SetHeaderText();
+            HienThiLenCombobox();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (rdTen.Checked == true)
+            {
+                List<DTO_HDNHAP> lh = BUS_HDNHAP.LayHDNhap();
+                List<DTO_HDNHAP> kq = (from hd in lh
+                                    where hd.SoHDNhap1.Contains(txtTim.Text)
+                                    select hd).ToList();
+                dgDSHDN.DataSource = kq;
+            }
+            else if (rdMa.Checked == true)
+            {
+                List<DTO_HDNHAP> hh = BUS_HDNHAP.LayHDNhap();
+                List<DTO_HDNHAP> kq = (from ma in hh
+                                    where ma.MaNCC1.Contains(txtTim.Text)
+                                    select ma).ToList();
+                dgDSHDN.DataSource = kq;
+            }
+        }
+
+        private void dgDSHDN_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            txtSoHD.Text = dgDSHDN.Rows[i].Cells["SoHDNhap1"].Value.ToString();
+            txtNV.Text = dgDSHDN.Rows[i].Cells["MaNV1"].Value.ToString();
+            cbNCC.Text = dgDSHDN.Rows[i].Cells["MaNCC1"].Value.ToString();
+            dtpNgayLap.Text = dgDSHDN.Rows[i].Cells["NgayLap1"].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu có bị bỏ trống
+            if (txtSoHD.Text == "" || cbNCC.Text == "" || txtNV.Text == "" || dtpNgayLap.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
+                return;
+            }
+            // Kiểm tra số hóa đơn có độ dài chuỗi hợp lệ hay không
+            if (txtSoHD.Text.Length > 8)
+            {
+                MessageBox.Show("Số hóa đơn tối đa 8 ký tự!");
+                return;
+            }
+            // Kiểm tra mã khách hàng có bị trùng không
+            if (BUS_HDNHAP.TimHDNTheoMa(txtSoHD.Text) == null)
+            {
+                MessageBox.Show("Mã khách hàng không tồn tại! Vui lòng chọn mã khác.");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_KhachHang
+            string nbd = dtpNgayLap.Value.ToString("yyyy/MM/dd");
+            DTO_HDNHAP hdn = new DTO_HDNHAP();
+            hdn.SoHDNhap1 = txtSoHD.Text;
+            hdn.MaNCC1 = cbNCC.Text;
+            hdn.MaNV1 = txtNV.Text;
+            hdn.NgayLap1 = nbd;
+            hdn.Flag1 = 1;
+            // Thực hiện thêm
+            if (BUS_HDNHAP.CapNhatHDN(hdn) == false)
+            {
+                MessageBox.Show("Không cập nhật được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã cập nhật hóa đơn.");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra mã NCC có tồn tại không
+            if (BUS_HDNHAP.TimHDNTheoMa(txtSoHD.Text) == null)
+            {
+                MessageBox.Show("Số hóa đơn không tồn tại!");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_NCC
+            DTO_HDNHAP hdn = new DTO_HDNHAP();
+            hdn.SoHDNhap1 = txtSoHD.Text;
+
+            // Thực hiện xóa 
+            if (BUS_HDNHAP.XoaHDN(hdn) == false)
+            {
+                MessageBox.Show("Không xóa được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã xóa hóa đơn.");
         }
     }
 }

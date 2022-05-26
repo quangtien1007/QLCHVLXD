@@ -14,6 +14,7 @@ namespace DTO
         private string NgayLap;
         private string TenKH;
         private string TenNV;
+        private int Flag;
 
         public string SoHDXuat1 { get => SoHDXuat; set => SoHDXuat = value; }
         public string MaKH1 { get => MaKH; set => MaKH = value; }
@@ -21,5 +22,6 @@ namespace DTO
         public string NgayLap1 { get => NgayLap; set => NgayLap = value; }
         public string TenKH1 { get => TenKH; set => TenKH = value; }
         public string TenNV1 { get => TenNV; set => TenNV = value; }
+        public int Flag1 { get => Flag; set => Flag = value; }
     }
 }

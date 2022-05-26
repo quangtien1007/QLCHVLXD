@@ -54,7 +54,7 @@ namespace QuanLiVLXD
         }
         private void HienThiLenCombobox()
         {
-            List<DTO_Kho> lstKho = BUS_Kho.LayKho();
+            List<DTO_LoaiHang> lstKho = BUS_LoaiHang.LayLH();
             cbLoai.DataSource = lstKho;
             cbLoai.DisplayMember = "MaLoai1";
             cbLoai.ValueMember = "MaLoai1";
@@ -66,6 +66,15 @@ namespace QuanLiVLXD
             HienThiLenCombobox();
             ColorDataGrid();
             SetHeaderText();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            List<DTO_Kho> kh = BUS_Kho.LayKho();
+            List<DTO_Kho> kq = (from ma in kh
+                                      where ma.MaLoai1.Contains(cbLoai.Text)
+                                      select ma).ToList();
+            dgKho.DataSource = kq;
         }
     }
 }

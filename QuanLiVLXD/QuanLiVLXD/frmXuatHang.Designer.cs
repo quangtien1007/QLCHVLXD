@@ -44,7 +44,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdTen = new System.Windows.Forms.RadioButton();
             this.rdMa = new System.Windows.Forms.RadioButton();
@@ -202,6 +202,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -212,6 +213,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -224,20 +226,20 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // textBox1
+            // txtTim
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(434, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTim.Location = new System.Drawing.Point(14, 29);
+            this.txtTim.Multiline = true;
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(434, 26);
+            this.txtTim.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdTen);
             this.groupBox2.Controls.Add(this.rdMa);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtTim);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(125, 295);
@@ -251,24 +253,25 @@
             // 
             this.rdTen.AutoSize = true;
             this.rdTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTen.Location = new System.Drawing.Point(762, 30);
+            this.rdTen.Location = new System.Drawing.Point(778, 27);
             this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(104, 28);
+            this.rdTen.Size = new System.Drawing.Size(135, 28);
             this.rdTen.TabIndex = 1;
             this.rdTen.TabStop = true;
-            this.rdTen.Text = "Theo tên";
+            this.rdTen.Text = "Theo tên KH";
             this.rdTen.UseVisualStyleBackColor = true;
+            this.rdTen.CheckedChanged += new System.EventHandler(this.rdTen_CheckedChanged);
             // 
             // rdMa
             // 
             this.rdMa.AutoSize = true;
             this.rdMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMa.Location = new System.Drawing.Point(637, 30);
+            this.rdMa.Location = new System.Drawing.Point(577, 27);
             this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(104, 28);
+            this.rdMa.Size = new System.Drawing.Size(174, 28);
             this.rdMa.TabIndex = 1;
             this.rdMa.TabStop = true;
-            this.rdMa.Text = "Theo mã";
+            this.rdMa.Text = "Theo số hóa đơn";
             this.rdMa.UseVisualStyleBackColor = true;
             // 
             // btnTim
@@ -280,6 +283,7 @@
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // frmXuatHang
             // 
@@ -325,7 +329,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdTen;
         private System.Windows.Forms.RadioButton rdMa;

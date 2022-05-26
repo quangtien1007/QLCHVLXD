@@ -53,10 +53,10 @@ namespace QuanLiVLXD
         }
         private void HienThiLenCombobox()
         {
-            List<DTO_HDXUAT> lstHDXuat = BUS_HDXUAT.LayHDXuat();
+            List<DTO_KhachHang> lstHDXuat = BUS_KhachHang.LayKH();
             cbKH.DataSource = lstHDXuat;
-            cbKH.DisplayMember = "TenKH1";
-            cbKH.ValueMember = "TenNV1";
+            cbKH.DisplayMember = "MaKH1";
+            cbKH.ValueMember = "MaKH1";
         }
         private void frmXuatHang_Load(object sender, EventArgs e)
         {
@@ -68,15 +68,15 @@ namespace QuanLiVLXD
 
         private void cbKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtNV.Text = cbKH.SelectedValue.ToString();
+            
         }
 
         private void dgDSHDX_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
             txtSoHD.Text = dgDSHDX.Rows[i].Cells["SoHDXuat1"].Value.ToString();
-            cbKH.Text = dgDSHDX.Rows[i].Cells["TenKH1"].Value.ToString();
-            txtNV.Text = dgDSHDX.Rows[i].Cells["TenNV1"].Value.ToString();
+            cbKH.Text = dgDSHDX.Rows[i].Cells["MaKH1"].Value.ToString();
+            txtNV.Text = dgDSHDX.Rows[i].Cells["MaNV1"].Value.ToString();
             dtpNgayLap.Text = dgDSHDX.Rows[i].Cells["NgayLap1"].Value.ToString();
         }
 
@@ -124,11 +124,13 @@ namespace QuanLiVLXD
                 return;
             }
             // Gán dữ liệu vào kiểu DTO_KhachHang
+            string nbd = dtpNgayLap.Value.ToString("yyyy/MM/dd");
             DTO_HDXUAT hdx = new DTO_HDXUAT();
             hdx.SoHDXuat1 = txtSoHD.Text;
             hdx.MaKH1 = cbKH.Text;
             hdx.MaNV1 = txtNV.Text;
-            hdx.NgayLap1 = dtpNgayLap.Text;
+            hdx.NgayLap1 = nbd;
+            hdx.Flag1 = 1;
             // Thực hiện thêm
             if (BUS_HDXUAT.ThemHDX(hdx) == false)
             {
@@ -137,6 +139,84 @@ namespace QuanLiVLXD
             }
             HienThiLenDataGrid();
             MessageBox.Show("Đã thêm hóa đơn.");
+        }
+
+        private void rdTen_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (rdTen.Checked == true)
+            {
+                List<DTO_HDXUAT> lh = BUS_HDXUAT.LayHDXuat();
+                List<DTO_HDXUAT> kq = (from hd in lh
+                                       where hd.TenKH1.Contains(txtTim.Text)
+                                       select hd).ToList();
+                dgDSHDX.DataSource = kq;
+            }
+            else if (rdMa.Checked == true)
+            {
+                List<DTO_HDXUAT> hh = BUS_HDXUAT.LayHDXuat();
+                List<DTO_HDXUAT> kq = (from ma in hh
+                                       where ma.SoHDXuat1.Contains(txtTim.Text)
+                                       select ma).ToList();
+                dgDSHDX.DataSource = kq;
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu có bị bỏ trống
+            if (txtSoHD.Text == "" || cbKH.Text == "" || txtNV.Text == "" || dtpNgayLap.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
+                return;
+            }
+            // Kiểm tra mã khách hàng có bị trùng không
+            if (BUS_HDXUAT.TimHDXTheoMa(txtSoHD.Text) == null)
+            {
+                MessageBox.Show("Mã khách hàng không tồn tại! Vui lòng chọn mã khác.");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_KhachHang
+            DTO_HDXUAT hdx = new DTO_HDXUAT();
+            hdx.SoHDXuat1 = txtSoHD.Text;
+            hdx.MaKH1 = cbKH.Text;
+            hdx.MaNV1 = txtNV.Text;
+            hdx.NgayLap1 = dtpNgayLap.Text;
+            hdx.Flag1 = 1;
+            // Thực hiện thêm
+            if (BUS_HDXUAT.CapNhatHDX(hdx) == false)
+            {
+                MessageBox.Show("Không cập nhật được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã cập nhật hóa đơn.");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra mã NCC có tồn tại không
+            if (BUS_HDXUAT.TimHDXTheoMa(txtSoHD.Text) == null)
+            {
+                MessageBox.Show("Số hóa đơn không tồn tại!");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_NCC
+            DTO_HDXUAT hdx = new DTO_HDXUAT();
+            hdx.SoHDXuat1 = txtSoHD.Text;
+
+            // Thực hiện xóa 
+            if (BUS_HDXUAT.XoaHDX(hdx) == false)
+            {
+                MessageBox.Show("Không xóa được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã xóa hóa đơn.");
         }
     }
 }

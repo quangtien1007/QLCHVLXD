@@ -30,16 +30,16 @@
         {
             this.dgBCNH = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpTu = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpDen = new System.Windows.Forms.DateTimePicker();
-            this.chbNCC = new System.Windows.Forms.CheckBox();
-            this.cbNCC = new System.Windows.Forms.ComboBox();
-            this.chbHD = new System.Windows.Forms.CheckBox();
-            this.cbHD = new System.Windows.Forms.ComboBox();
-            this.btnThucHien = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
+            this.btnThucHien = new System.Windows.Forms.Button();
+            this.cbHD = new System.Windows.Forms.ComboBox();
+            this.chbHD = new System.Windows.Forms.CheckBox();
+            this.cbNCC = new System.Windows.Forms.ComboBox();
+            this.chbNCC = new System.Windows.Forms.CheckBox();
+            this.dtpDen = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpTu = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgBCNH)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -50,6 +50,7 @@
             this.dgBCNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBCNH.Location = new System.Drawing.Point(298, 100);
             this.dgBCNH.Name = "dgBCNH";
+            this.dgBCNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBCNH.Size = new System.Drawing.Size(819, 461);
             this.dgBCNH.TabIndex = 9;
             // 
@@ -73,59 +74,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
-            // label1
+            // btnIn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Từ ngày";
+            this.btnIn.Location = new System.Drawing.Point(56, 411);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(120, 33);
+            this.btnIn.TabIndex = 4;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
             // 
-            // dtpTu
+            // btnThucHien
             // 
-            this.dtpTu.CustomFormat = "dd/MM/yyyy";
-            this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTu.Location = new System.Drawing.Point(26, 68);
-            this.dtpTu.Name = "dtpTu";
-            this.dtpTu.Size = new System.Drawing.Size(184, 29);
-            this.dtpTu.TabIndex = 1;
+            this.btnThucHien.Location = new System.Drawing.Point(56, 372);
+            this.btnThucHien.Name = "btnThucHien";
+            this.btnThucHien.Size = new System.Drawing.Size(120, 33);
+            this.btnThucHien.TabIndex = 4;
+            this.btnThucHien.Text = "Thực hiện";
+            this.btnThucHien.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // cbHD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Đến ngày";
-            // 
-            // dtpDen
-            // 
-            this.dtpDen.CustomFormat = "dd/MM/yyyy";
-            this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDen.Location = new System.Drawing.Point(26, 135);
-            this.dtpDen.Name = "dtpDen";
-            this.dtpDen.Size = new System.Drawing.Size(184, 29);
-            this.dtpDen.TabIndex = 1;
-            // 
-            // chbNCC
-            // 
-            this.chbNCC.AutoSize = true;
-            this.chbNCC.Location = new System.Drawing.Point(26, 204);
-            this.chbNCC.Name = "chbNCC";
-            this.chbNCC.Size = new System.Drawing.Size(119, 28);
-            this.chbNCC.TabIndex = 2;
-            this.chbNCC.Text = "Theo NCC";
-            this.chbNCC.UseVisualStyleBackColor = true;
-            // 
-            // cbNCC
-            // 
-            this.cbNCC.FormattingEnabled = true;
-            this.cbNCC.Location = new System.Drawing.Point(26, 239);
-            this.cbNCC.Name = "cbNCC";
-            this.cbNCC.Size = new System.Drawing.Size(184, 32);
-            this.cbNCC.TabIndex = 3;
+            this.cbHD.FormattingEnabled = true;
+            this.cbHD.Location = new System.Drawing.Point(26, 318);
+            this.cbHD.Name = "cbHD";
+            this.cbHD.Size = new System.Drawing.Size(184, 32);
+            this.cbHD.TabIndex = 3;
             // 
             // chbHD
             // 
@@ -137,31 +110,59 @@
             this.chbHD.Text = "Theo hóa đơn";
             this.chbHD.UseVisualStyleBackColor = true;
             // 
-            // cbHD
+            // cbNCC
             // 
-            this.cbHD.FormattingEnabled = true;
-            this.cbHD.Location = new System.Drawing.Point(26, 318);
-            this.cbHD.Name = "cbHD";
-            this.cbHD.Size = new System.Drawing.Size(184, 32);
-            this.cbHD.TabIndex = 3;
+            this.cbNCC.FormattingEnabled = true;
+            this.cbNCC.Location = new System.Drawing.Point(26, 239);
+            this.cbNCC.Name = "cbNCC";
+            this.cbNCC.Size = new System.Drawing.Size(184, 32);
+            this.cbNCC.TabIndex = 3;
             // 
-            // btnThucHien
+            // chbNCC
             // 
-            this.btnThucHien.Location = new System.Drawing.Point(56, 372);
-            this.btnThucHien.Name = "btnThucHien";
-            this.btnThucHien.Size = new System.Drawing.Size(120, 33);
-            this.btnThucHien.TabIndex = 4;
-            this.btnThucHien.Text = "Thực hiện";
-            this.btnThucHien.UseVisualStyleBackColor = true;
+            this.chbNCC.AutoSize = true;
+            this.chbNCC.Location = new System.Drawing.Point(26, 204);
+            this.chbNCC.Name = "chbNCC";
+            this.chbNCC.Size = new System.Drawing.Size(119, 28);
+            this.chbNCC.TabIndex = 2;
+            this.chbNCC.Text = "Theo NCC";
+            this.chbNCC.UseVisualStyleBackColor = true;
             // 
-            // btnIn
+            // dtpDen
             // 
-            this.btnIn.Location = new System.Drawing.Point(56, 411);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(120, 33);
-            this.btnIn.TabIndex = 4;
-            this.btnIn.Text = "In";
-            this.btnIn.UseVisualStyleBackColor = true;
+            this.dtpDen.CustomFormat = "dd/MM/yyyy";
+            this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDen.Location = new System.Drawing.Point(26, 135);
+            this.dtpDen.Name = "dtpDen";
+            this.dtpDen.Size = new System.Drawing.Size(184, 29);
+            this.dtpDen.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Đến ngày";
+            // 
+            // dtpTu
+            // 
+            this.dtpTu.CustomFormat = "dd/MM/yyyy";
+            this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTu.Location = new System.Drawing.Point(26, 68);
+            this.dtpTu.Name = "dtpTu";
+            this.dtpTu.Size = new System.Drawing.Size(184, 29);
+            this.dtpTu.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Từ ngày";
             // 
             // label3
             // 
@@ -187,6 +188,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBaoCaoNhapHang";
             this.Text = "frmBaoCaoNhapHang";
+            this.Load += new System.EventHandler(this.frmBaoCaoNhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgBCNH)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

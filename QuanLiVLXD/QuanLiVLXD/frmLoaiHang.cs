@@ -158,5 +158,25 @@ namespace QuanLiVLXD
             txtDienGiai.Text = dgDSLH.Rows[i].Cells["DienGiai1"].Value.ToString();
             txtTrangThai.Text = dgDSLH.Rows[i].Cells["TrangThai1"].Value.ToString();
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (rdTen.Checked == true)
+            {
+                List<DTO_LoaiHang> lh = BUS_LoaiHang.LayLH();
+                List<DTO_LoaiHang> kq = (from ten in lh
+                                        where ten.TenLoai1.Contains(txtTim.Text)
+                                        select ten).ToList();
+                dgDSLH.DataSource = kq;
+            }
+            else if (rdMa.Checked == true)
+            {
+                List<DTO_LoaiHang> hh = BUS_LoaiHang.LayLH();
+                List<DTO_LoaiHang> kq = (from ma in hh
+                                        where ma.MaLoai1.Contains(txtTim.Text)
+                                        select ma).ToList();
+                dgDSLH.DataSource = kq;
+            }
+        }
     }
 }

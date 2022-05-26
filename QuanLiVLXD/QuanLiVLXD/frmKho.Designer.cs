@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.cbLoai = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgKho = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgKho)).BeginInit();
             this.SuspendLayout();
@@ -54,21 +54,23 @@
             this.cbLoai.Size = new System.Drawing.Size(190, 32);
             this.cbLoai.TabIndex = 1;
             // 
-            // button1
+            // btnLamMoi
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(505, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Làm mới";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Location = new System.Drawing.Point(505, 28);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(84, 28);
+            this.btnLamMoi.TabIndex = 2;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // dgKho
             // 
             this.dgKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgKho.Location = new System.Drawing.Point(146, 66);
             this.dgKho.Name = "dgKho";
+            this.dgKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgKho.Size = new System.Drawing.Size(882, 461);
             this.dgKho.TabIndex = 3;
             // 
@@ -79,7 +81,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1908, 935);
             this.Controls.Add(this.dgKho);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.cbLoai);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -96,7 +98,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLoai;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.DataGridView dgKho;
     }
 }

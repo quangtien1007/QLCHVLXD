@@ -172,5 +172,25 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã xóa hàng hóa.");
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (rdTen.Checked == true)
+            {
+                List<DTO_HangHoa> hh = BUS_HangHoa.LayHH();
+                List<DTO_HangHoa> kq = (from ten in hh
+                                        where ten.TenHH1.Contains(txtTim.Text)
+                                        select ten).ToList();
+                dgDSHH.DataSource = kq;
+            }
+            else if(rdMa.Checked == true)
+            {
+                List<DTO_HangHoa> hh = BUS_HangHoa.LayHH();
+                List<DTO_HangHoa> kq = (from ma in hh
+                                        where ma.MaHH1.Contains(txtTim.Text)
+                                        select ma).ToList();
+                dgDSHH.DataSource = kq;
+            }
+        }
     }
 }

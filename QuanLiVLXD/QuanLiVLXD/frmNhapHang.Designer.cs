@@ -38,7 +38,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.gbKH = new System.Windows.Forms.GroupBox();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.cbNCC = new System.Windows.Forms.ComboBox();
             this.txtNV = new System.Windows.Forms.TextBox();
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNhap = new System.Windows.Forms.Button();
+            this.cbNCC = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.gbKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHDN)).BeginInit();
@@ -59,24 +59,24 @@
             // 
             this.rdTen.AutoSize = true;
             this.rdTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTen.Location = new System.Drawing.Point(762, 30);
+            this.rdTen.Location = new System.Drawing.Point(716, 29);
             this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(104, 28);
+            this.rdTen.Size = new System.Drawing.Size(174, 28);
             this.rdTen.TabIndex = 1;
             this.rdTen.TabStop = true;
-            this.rdTen.Text = "Theo tên";
+            this.rdTen.Text = "Theo số hóa đơn";
             this.rdTen.UseVisualStyleBackColor = true;
             // 
             // rdMa
             // 
             this.rdMa.AutoSize = true;
             this.rdMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMa.Location = new System.Drawing.Point(637, 30);
+            this.rdMa.Location = new System.Drawing.Point(591, 30);
             this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(104, 28);
+            this.rdMa.Size = new System.Drawing.Size(118, 28);
             this.rdMa.TabIndex = 1;
             this.rdMa.TabStop = true;
-            this.rdMa.Text = "Theo mã";
+            this.rdMa.Text = "Theo NCC";
             this.rdMa.UseVisualStyleBackColor = true;
             // 
             // btnTim
@@ -88,6 +88,7 @@
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // groupBox2
             // 
@@ -121,6 +122,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -131,6 +133,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -169,14 +172,6 @@
             this.dtpNgayLap.Name = "dtpNgayLap";
             this.dtpNgayLap.Size = new System.Drawing.Size(171, 29);
             this.dtpNgayLap.TabIndex = 3;
-            // 
-            // cbNCC
-            // 
-            this.cbNCC.FormattingEnabled = true;
-            this.cbNCC.Location = new System.Drawing.Point(150, 136);
-            this.cbNCC.Name = "cbNCC";
-            this.cbNCC.Size = new System.Drawing.Size(174, 32);
-            this.cbNCC.TabIndex = 2;
             // 
             // txtNV
             // 
@@ -239,8 +234,10 @@
             this.dgDSHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDSHDN.Location = new System.Drawing.Point(125, 372);
             this.dgDSHDN.Name = "dgDSHDN";
+            this.dgDSHDN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDSHDN.Size = new System.Drawing.Size(919, 192);
             this.dgDSHDN.TabIndex = 16;
+            this.dgDSHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSHDN_CellClick);
             // 
             // label5
             // 
@@ -277,6 +274,14 @@
             this.btnNhap.Text = "Nhập hàng";
             this.btnNhap.UseVisualStyleBackColor = true;
             this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            // 
+            // cbNCC
+            // 
+            this.cbNCC.FormattingEnabled = true;
+            this.cbNCC.Location = new System.Drawing.Point(150, 136);
+            this.cbNCC.Name = "cbNCC";
+            this.cbNCC.Size = new System.Drawing.Size(174, 32);
+            this.cbNCC.TabIndex = 2;
             // 
             // frmNhapHang
             // 
@@ -316,7 +321,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox gbKH;
         private System.Windows.Forms.DateTimePicker dtpNgayLap;
-        private System.Windows.Forms.ComboBox cbNCC;
         private System.Windows.Forms.TextBox txtNV;
         private System.Windows.Forms.TextBox txtSoHD;
         private System.Windows.Forms.Label label2;
@@ -327,5 +331,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnNhap;
+        private System.Windows.Forms.ComboBox cbNCC;
     }
 }

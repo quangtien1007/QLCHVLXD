@@ -32,7 +32,7 @@
             this.rdMa = new System.Windows.Forms.RadioButton();
             this.btnTim = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.dgDSHH = new System.Windows.Forms.DataGridView();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -89,12 +89,13 @@
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdTen);
             this.groupBox2.Controls.Add(this.rdMa);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtTim);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(125, 295);
@@ -104,14 +105,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
-            // textBox5
+            // txtTim
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(14, 29);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(434, 26);
-            this.textBox5.TabIndex = 0;
+            this.txtTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTim.Location = new System.Drawing.Point(14, 29);
+            this.txtTim.Multiline = true;
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(434, 26);
+            this.txtTim.TabIndex = 0;
             // 
             // dgDSHH
             // 
@@ -323,7 +324,7 @@
         private System.Windows.Forms.RadioButton rdMa;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.DataGridView dgDSHH;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;

@@ -14,7 +14,7 @@ namespace DAO
         static SqlConnection con;
         public static List<DTO_HDNHAP> LayHDNhap()
         {
-            string sTruyVan = "SELECT n.SO_HD_NHAP,n.MANCC,n.MANV,n.NGAYLAP_NHAP,m.TENNCC,v.TENNV from HOADON_NHAP n, NHACUNGCAP m, NHANVIEN v where n.MANCC=m.MANCC and n.MANV=v.MANV";
+            string sTruyVan = "SELECT n.SO_HD_NHAP,n.MANCC,n.MANV,n.NGAYLAP_NHAP,n.FLAGNHAP,m.TENNCC,v.TENNV from HOADON_NHAP n, NHACUNGCAP m, NHANVIEN v where n.MANCC=m.MANCC and n.MANV=v.MANV";
             con = DataProvider.MoKetNoi();
             DataTable dt = DataProvider.TruyVanLayDuLieu(sTruyVan, con);
             if (dt.Rows.Count == 0)
@@ -31,6 +31,7 @@ namespace DAO
                 hdn.NgayLap1 = dt.Rows[i]["NGAYLAP_NHAP"].ToString();
                 hdn.TenNCC1 = dt.Rows[i]["TENNCC"].ToString();
                 hdn.TenNV1 = dt.Rows[i]["TENNV"].ToString();
+                hdn.Flag1 = int.Parse(dt.Rows[i]["FLAGNHAP"].ToString());
                 lstHDNhap.Add(hdn);
             }
             DataProvider.DongKetNoi(con);
@@ -40,7 +41,7 @@ namespace DAO
         public static bool ThemHDN(DTO_HDNHAP hdn)
         {
             string sTruyVan = string.Format(@"INSERT INTO HOADON_NHAP VALUES(N'{0}',
-                N'{1}',N'{2}',N'{3}')", hdn.SoHDNhap1, hdn.MaNCC1, hdn.MaNV1, hdn.NgayLap1);
+                N'{1}',N'{2}',N'{3}',{4})", hdn.SoHDNhap1, hdn.MaNCC1, hdn.MaNV1, hdn.NgayLap1,hdn.Flag1);
             con = DataProvider.MoKetNoi();
             bool kq = DataProvider.TruyVanKhongLayDuLieu(sTruyVan, con);
             DataProvider.DongKetNoi(con);
@@ -61,14 +62,15 @@ namespace DAO
             hdn.MaNCC1 = dt.Rows[0]["MANCC"].ToString();
             hdn.MaNV1 = dt.Rows[0]["MANV"].ToString();
             hdn.NgayLap1 = dt.Rows[0]["NGAYLAP_NHAP"].ToString();
+            hdn.Flag1 = int.Parse(dt.Rows[0]["FLAGNHAP"].ToString());
             DataProvider.DongKetNoi(con);
             return hdn;
         }
         // Cập nhật thông tin HDX
         public static bool CapNhatHDN(DTO_HDNHAP hdn)
         {
-            string sTruyVan = string.Format(@"UPDATE HOADON_XUAT SET MANCC=N'{0}',MANV=N'{1}',NGAYLAP_NHAP=N'{2}' where SO_HD_NHAP=N'{3}'",
-                hdn.MaNCC1, hdn.MaNV1, hdn.NgayLap1, hdn.SoHDNhap1);
+            string sTruyVan = string.Format(@"UPDATE HOADON_XUAT SET MANCC=N'{0}',MANV=N'{1}',NGAYLAP_NHAP=N'{2}',FLAG_NHAP={3} where SO_HD_NHAP=N'{4}'",
+                hdn.MaNCC1, hdn.MaNV1, hdn.NgayLap1,hdn.Flag1,hdn.SoHDNhap1);
             con = DataProvider.MoKetNoi();
             bool kq = DataProvider.TruyVanKhongLayDuLieu(sTruyVan, con);
             DataProvider.DongKetNoi(con);

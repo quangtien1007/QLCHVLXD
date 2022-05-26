@@ -46,7 +46,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdTen = new System.Windows.Forms.RadioButton();
             this.rdMa = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
             this.gbKH.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -215,7 +215,7 @@
             // 
             this.groupBox2.Controls.Add(this.rdTen);
             this.groupBox2.Controls.Add(this.rdMa);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtTim);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(125, 295);
@@ -249,14 +249,14 @@
             this.rdMa.Text = "Theo mã";
             this.rdMa.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTim
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(434, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTim.Location = new System.Drawing.Point(14, 29);
+            this.txtTim.Multiline = true;
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(434, 26);
+            this.txtTim.TabIndex = 0;
             // 
             // btnTim
             // 
@@ -267,6 +267,7 @@
             this.btnTim.TabIndex = 0;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // frmLoaiHang
             // 
@@ -314,7 +315,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdTen;
         private System.Windows.Forms.RadioButton rdMa;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Button btnTim;
         public System.Windows.Forms.TextBox txtTrangThai;
     }

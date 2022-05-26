@@ -168,5 +168,25 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã xóa NCC.");
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (rdTen.Checked == true)
+            {
+                List<DTO_NCC> lh = BUS_NCC.LayNCC();
+                List<DTO_NCC> kq = (from ten in lh
+                                         where ten.TenNCC1.Contains(txtTim.Text)
+                                         select ten).ToList();
+                dgDSNCC.DataSource = kq;
+            }
+            else if (rdMa.Checked == true)
+            {
+                List<DTO_NCC> hh = BUS_NCC.LayNCC();
+                List<DTO_NCC> kq = (from ma in hh
+                                         where ma.MaNCC1.Contains(txtTim.Text)
+                                         select ma).ToList();
+                dgDSNCC.DataSource = kq;
+            }
+        }
     }
 }

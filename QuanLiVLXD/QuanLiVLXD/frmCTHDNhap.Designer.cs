@@ -69,7 +69,7 @@
             // 
             // btnTim
             // 
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Location = new System.Drawing.Point(483, 25);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(88, 35);
@@ -188,9 +188,10 @@
             // rdTen
             // 
             this.rdTen.AutoSize = true;
+            this.rdTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdTen.Location = new System.Drawing.Point(762, 30);
             this.rdTen.Name = "rdTen";
-            this.rdTen.Size = new System.Drawing.Size(90, 24);
+            this.rdTen.Size = new System.Drawing.Size(104, 28);
             this.rdTen.TabIndex = 1;
             this.rdTen.TabStop = true;
             this.rdTen.Text = "Theo tên";
@@ -213,9 +214,10 @@
             // rdMa
             // 
             this.rdMa.AutoSize = true;
+            this.rdMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdMa.Location = new System.Drawing.Point(637, 30);
             this.rdMa.Name = "rdMa";
-            this.rdMa.Size = new System.Drawing.Size(89, 24);
+            this.rdMa.Size = new System.Drawing.Size(104, 28);
             this.rdMa.TabIndex = 1;
             this.rdMa.TabStop = true;
             this.rdMa.Text = "Theo mã";
@@ -223,7 +225,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(14, 29);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -246,6 +248,7 @@
             this.dgDSCTHDX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDSCTHDX.Location = new System.Drawing.Point(30, 414);
             this.dgDSCTHDX.Name = "dgDSCTHDX";
+            this.dgDSCTHDX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgDSCTHDX.Size = new System.Drawing.Size(919, 192);
             this.dgDSCTHDX.TabIndex = 26;
             // 
