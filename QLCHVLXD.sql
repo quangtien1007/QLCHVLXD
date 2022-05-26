@@ -255,16 +255,13 @@ SELECT DBO.XEM_TENNV('NV0002');
 
 select n.SO_HD_NHAP,n.MANCC,n.MANV,n.NGAYLAP_NHAP,m.TENNCC,v.TENNV from HOADON_NHAP n, NHACUNGCAP m, NHANVIEN v where n.MANCC=m.MANCC and n.MANV=v.MANV
 select * from nhacungcap
-private string LoaiHang;
-        private string TenHang;
-        private string DVT;
-        private int SoLuongKho;
-        private string XuatXu;
-        private string MaHH;
-        private int IDKho;
+
 SELECT h.TENHH,h.DONVITINH,h.XUATXU,k.SOLUONG from HANGHOA h, KHO k where h.MAHH=k.MAHH
 drop table LOAIHANG1
 select * from KHO
-
+select * from CT_HOADON_NHAP
+select * from HOADON_XUAT
+select * from Hanghoa
+SELECT n.TENNCC,h.TENHH,h.DONVITINH,i.SOLUONG_NHAP,i.DONGIA_NHAP,c.NGAYLAP_NHAP from HANGHOA h,NHACUNGCAP n,HOADON_NHAP c,CT_HOADON_NHAP i where h.MAHH=i.MAHH and i.SO_HD_NHAP=c.SO_HD_NHAP and c.MANCC=n.MANCC
 
 

@@ -42,11 +42,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,6 +65,8 @@
             this.rdTen = new System.Windows.Forms.RadioButton();
             this.rdMa = new System.Windows.Forms.RadioButton();
             this.btnTim = new System.Windows.Forms.Button();
+            this.cbKH = new System.Windows.Forms.ComboBox();
+            this.cbKH1 = new System.Windows.Forms.ComboBox();
             this.gbKH.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,12 +76,13 @@
             // 
             // gbKH
             // 
+            this.gbKH.Controls.Add(this.cbKH1);
+            this.gbKH.Controls.Add(this.cbKH);
             this.gbKH.Controls.Add(this.groupBox3);
-            this.gbKH.Controls.Add(this.dateTimePicker1);
+            this.gbKH.Controls.Add(this.dtpNgayLap);
             this.gbKH.Controls.Add(this.txtTenNV);
             this.gbKH.Controls.Add(this.txtSDT);
-            this.gbKH.Controls.Add(this.textBox7);
-            this.gbKH.Controls.Add(this.txtTenKH);
+            this.gbKH.Controls.Add(this.txtDiaChi);
             this.gbKH.Controls.Add(this.txtSoHD);
             this.gbKH.Controls.Add(this.label6);
             this.gbKH.Controls.Add(this.label7);
@@ -94,7 +96,7 @@
             this.gbKH.Size = new System.Drawing.Size(730, 261);
             this.gbKH.TabIndex = 19;
             this.gbKH.TabStop = false;
-            this.gbKH.Text = "Cập nhật chi tiết hóa đơn nhập";
+            this.gbKH.Text = "Cập nhật chi tiết hóa đơn xuat";
             // 
             // groupBox3
             // 
@@ -224,12 +226,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Hàng hóa";
             // 
-            // dateTimePicker1
+            // dtpNgayLap
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(491, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayLap.Location = new System.Drawing.Point(491, 25);
+            this.dtpNgayLap.Name = "dtpNgayLap";
+            this.dtpNgayLap.Size = new System.Drawing.Size(200, 29);
+            this.dtpNgayLap.TabIndex = 2;
             // 
             // txtTenNV
             // 
@@ -246,22 +250,15 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(178, 29);
             this.txtSDT.TabIndex = 1;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
-            // textBox7
+            // txtDiaChi
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(491, 59);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 29);
-            this.textBox7.TabIndex = 1;
-            // 
-            // txtTenKH
-            // 
-            this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKH.Location = new System.Drawing.Point(145, 62);
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(178, 29);
-            this.txtTenKH.TabIndex = 1;
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(491, 59);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(200, 29);
+            this.txtDiaChi.TabIndex = 1;
             // 
             // txtSoHD
             // 
@@ -462,6 +459,24 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
+            // cbKH
+            // 
+            this.cbKH.FormattingEnabled = true;
+            this.cbKH.Location = new System.Drawing.Point(145, 59);
+            this.cbKH.Name = "cbKH";
+            this.cbKH.Size = new System.Drawing.Size(178, 32);
+            this.cbKH.TabIndex = 4;
+            this.cbKH.SelectedIndexChanged += new System.EventHandler(this.cbKH_SelectedIndexChanged);
+            // 
+            // cbKH1
+            // 
+            this.cbKH1.FormattingEnabled = true;
+            this.cbKH1.Location = new System.Drawing.Point(145, 59);
+            this.cbKH1.Name = "cbKH1";
+            this.cbKH1.Size = new System.Drawing.Size(178, 32);
+            this.cbKH1.TabIndex = 5;
+            this.cbKH1.SelectedIndexChanged += new System.EventHandler(this.cbKH1_SelectedIndexChanged);
+            // 
             // frmCTHDXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,7 +510,7 @@
 
         private System.Windows.Forms.GroupBox gbKH;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayLap;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtSoHD;
@@ -525,11 +540,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbKH;
+        private System.Windows.Forms.ComboBox cbKH1;
     }
 }

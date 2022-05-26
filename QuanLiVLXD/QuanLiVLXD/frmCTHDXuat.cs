@@ -15,10 +15,48 @@ namespace QuanLiVLXD
 {
     public partial class frmCTHDXuat : Form
     {
+        private string SoHD, KhachHang, NhanVien,NgayLap;
         public frmCTHDXuat()
         {
             InitializeComponent();
         }
+        public frmCTHDXuat(string SoHD,string KhachHang,string NgayLap,string NhanVien)
+        {
+            InitializeComponent();
+            this.SoHD = SoHD;
+            this.KhachHang = KhachHang;
+            this.NgayLap = NgayLap;
+            this.NhanVien = NhanVien;
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        public void HienThiLenComboBox()
+        {
+            List<DTO_KhachHang> lstKH = BUS_KhachHang.LayKH();
+            cbKH.DataSource = lstKH;
+            cbKH.DisplayMember = "MaKH1";
+            cbKH.ValueMember = "DiaChi1";
+        }
+        public void HienThiLenComboBox1()
+        {
+            List<DTO_KhachHang> lstKH = BUS_KhachHang.LayKH();
+            cbKH1.DataSource = lstKH;
+            cbKH1.DisplayMember = "MaKH1";
+            cbKH1.ValueMember = "SDT1";
+        }
+        private void cbKH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDiaChi.Text = cbKH.SelectedValue.ToString();
+        }
+
+        private void cbKH1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSDT.Text = cbKH1.SelectedValue.ToString();
+        }
+
         private void HienThiLenDataGrid()
         {
             List<DTO_CTHDXUAT> lstCTHDX = BUS_CTHDX.LayCTHDXuat();
@@ -43,6 +81,12 @@ namespace QuanLiVLXD
         {
             HienThiLenDataGrid();
             ColorDataGrid();
+            HienThiLenComboBox();
+            HienThiLenComboBox1();
+            txtSoHD.Text = this.SoHD;
+            cbKH.Text = this.KhachHang;
+            dtpNgayLap.Text = this.NgayLap;
+            txtTenNV.Text = this.NhanVien;
         }
     }
 }

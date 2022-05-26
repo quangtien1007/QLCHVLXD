@@ -85,7 +85,11 @@ namespace QuanLiVLXD
         frmMain fM;
         private void btnXuatHang_Click(object sender, EventArgs e)
         {
-            MoForm(new frmCTHDXuat());
+            DTO_HDXUAT hdx = new DTO_HDXUAT();
+            frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text,cbKH.Text,dtpNgayLap.Text,txtNV.Text);
+            this.Hide();
+            f.ShowDialog();
+            //MoForm(new frmCTHDXuat());
         }
         public void MoForm(Form Formmoi)
         {
