@@ -57,6 +57,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.sttTTTaiKhoan = new System.Windows.Forms.ToolStripStatusLabel();
             this.sttTTThoiGian = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuQLNV = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelCentral.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -74,7 +75,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(404, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +86,8 @@
             this.menuTaoTK,
             this.menuDoiMK,
             this.menuDangXuat,
-            this.menuQLTK});
+            this.menuQLTK,
+            this.menuQLNV});
             this.accToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accToolStripMenuItem.Name = "accToolStripMenuItem";
             this.accToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
@@ -94,21 +96,21 @@
             // menuDangNhap
             // 
             this.menuDangNhap.Name = "menuDangNhap";
-            this.menuDangNhap.Size = new System.Drawing.Size(196, 24);
+            this.menuDangNhap.Size = new System.Drawing.Size(199, 24);
             this.menuDangNhap.Text = "Đăng nhập";
             this.menuDangNhap.Click += new System.EventHandler(this.menuDangNhap_Click);
             // 
             // menuTaoTK
             // 
             this.menuTaoTK.Name = "menuTaoTK";
-            this.menuTaoTK.Size = new System.Drawing.Size(196, 24);
+            this.menuTaoTK.Size = new System.Drawing.Size(199, 24);
             this.menuTaoTK.Text = "Tạo tài khoản";
             this.menuTaoTK.Click += new System.EventHandler(this.menuTaoTK_Click);
             // 
             // menuDoiMK
             // 
             this.menuDoiMK.Name = "menuDoiMK";
-            this.menuDoiMK.Size = new System.Drawing.Size(196, 24);
+            this.menuDoiMK.Size = new System.Drawing.Size(199, 24);
             this.menuDoiMK.Text = "Đổi mật khẩu";
             this.menuDoiMK.Click += new System.EventHandler(this.menuDoiMK_Click);
             // 
@@ -116,14 +118,14 @@
             // 
             this.menuDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuDangXuat.Name = "menuDangXuat";
-            this.menuDangXuat.Size = new System.Drawing.Size(196, 24);
+            this.menuDangXuat.Size = new System.Drawing.Size(199, 24);
             this.menuDangXuat.Text = "Đăng xuất";
             this.menuDangXuat.Click += new System.EventHandler(this.menuDangXuat_Click);
             // 
             // menuQLTK
             // 
             this.menuQLTK.Name = "menuQLTK";
-            this.menuQLTK.Size = new System.Drawing.Size(196, 24);
+            this.menuQLTK.Size = new System.Drawing.Size(199, 24);
             this.menuQLTK.Text = "Quản lí tài khoản";
             this.menuQLTK.Click += new System.EventHandler(this.menuQLTK_Click);
             // 
@@ -302,6 +304,13 @@
             this.sttTTThoiGian.Size = new System.Drawing.Size(188, 25);
             this.sttTTThoiGian.Text = "toolStripStatusLabel2";
             // 
+            // menuQLNV
+            // 
+            this.menuQLNV.Name = "menuQLNV";
+            this.menuQLNV.Size = new System.Drawing.Size(199, 24);
+            this.menuQLNV.Text = "Quản lí nhân viên";
+            this.menuQLNV.Click += new System.EventHandler(this.menuQLNV_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -361,6 +370,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuDSNCC;
         private System.Windows.Forms.ToolStripMenuItem menuDSLH;
         private System.Windows.Forms.ToolStripMenuItem menuDSHH;
+        private System.Windows.Forms.ToolStripMenuItem menuQLNV;
     }
 }
 

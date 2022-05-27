@@ -26,7 +26,12 @@ namespace QuanLiVLXD
 
         private void frmQuanliTK_Load(object sender, EventArgs e)
         {
-            HienThiDSTKLenDataGridView();
+            HienThiDSTKLenDTGV();
+            ColorDataGrid();
+            SetHeaderText();
+        }
+        private void ColorDataGrid()
+        {
             dgDSTK.BorderStyle = BorderStyle.None;
             dgDSTK.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgDSTK.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -38,6 +43,7 @@ namespace QuanLiVLXD
             dgDSTK.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgDSTK.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dgDSTK.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
         private void dgDSTK_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -50,10 +56,16 @@ namespace QuanLiVLXD
         private void HienThiDSTKLenDTGV()
         {
             List<DTO_TaiKhoan> lstTaiKhoan = BUS_TaiKhoan.LayTKhoan();
-            dgDSTK.DataSource = lstTaiKhoan;
+            dgDSTK.DataSource = lstTaiKhoan;   
+        }
+        private void SetHeaderText()
+        {
             dgDSTK.Columns["STen"].HeaderText = "Tên tài khoản";
+            dgDSTK.Columns["STen"].Width = 200;
             dgDSTK.Columns["SMatKhau"].HeaderText = "Mật khẩu";
+            dgDSTK.Columns["SMatKhau"].Width = 200;
             dgDSTK.Columns["IQuyen"].HeaderText = "Quyền";
+            dgDSTK.Columns["IQuyen"].Width = 200;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -111,6 +123,14 @@ namespace QuanLiVLXD
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgDSTK_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            txtTaiKhoan.Text = dgDSTK.Rows[i].Cells["STen"].Value.ToString();
+            txtMatKhau.Text = dgDSTK.Rows[i].Cells["SMatKhau"].Value.ToString();
+            txtQuyen.Text = dgDSTK.Rows[i].Cells["IQuyen"].Value.ToString();
         }
     }
 }

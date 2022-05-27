@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gbKH = new System.Windows.Forms.GroupBox();
-            this.cbKH1 = new System.Windows.Forms.ComboBox();
             this.cbKH = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbKH1 = new System.Windows.Forms.ComboBox();
             this.cbHangHoa = new System.Windows.Forms.ComboBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -67,6 +67,7 @@
             this.rdTen = new System.Windows.Forms.RadioButton();
             this.rdMa = new System.Windows.Forms.RadioButton();
             this.btnTim = new System.Windows.Forms.Button();
+            this.btnTinh = new System.Windows.Forms.Button();
             this.gbKH.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,16 +97,6 @@
             this.gbKH.TabIndex = 19;
             this.gbKH.TabStop = false;
             this.gbKH.Text = "Cập nhật chi tiết hóa đơn xuat";
-            // 
-            // cbKH1
-            // 
-            this.cbKH1.Enabled = false;
-            this.cbKH1.FormattingEnabled = true;
-            this.cbKH1.Location = new System.Drawing.Point(293, -5);
-            this.cbKH1.Name = "cbKH1";
-            this.cbKH1.Size = new System.Drawing.Size(178, 32);
-            this.cbKH1.TabIndex = 5;
-            this.cbKH1.SelectedIndexChanged += new System.EventHandler(this.cbKH1_SelectedIndexChanged);
             // 
             // cbKH
             // 
@@ -137,6 +128,16 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
+            // cbKH1
+            // 
+            this.cbKH1.Enabled = false;
+            this.cbKH1.FormattingEnabled = true;
+            this.cbKH1.Location = new System.Drawing.Point(293, -5);
+            this.cbKH1.Name = "cbKH1";
+            this.cbKH1.Size = new System.Drawing.Size(178, 32);
+            this.cbKH1.TabIndex = 5;
+            this.cbKH1.SelectedIndexChanged += new System.EventHandler(this.cbKH1_SelectedIndexChanged);
+            // 
             // cbHangHoa
             // 
             this.cbHangHoa.FormattingEnabled = true;
@@ -152,6 +153,7 @@
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(200, 29);
             this.txtThanhTien.TabIndex = 4;
+            this.txtThanhTien.TextChanged += new System.EventHandler(this.txtThanhTien_TextChanged);
             // 
             // txtDonGia
             // 
@@ -354,6 +356,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTinh);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
@@ -369,7 +372,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(53, 195);
+            this.button1.Location = new System.Drawing.Point(53, 134);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 39);
             this.button1.TabIndex = 0;
@@ -379,7 +382,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(53, 141);
+            this.btnXoa.Location = new System.Drawing.Point(53, 97);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(85, 39);
             this.btnXoa.TabIndex = 0;
@@ -389,7 +392,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(53, 89);
+            this.btnSua.Location = new System.Drawing.Point(53, 62);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 39);
             this.btnSua.TabIndex = 0;
@@ -399,7 +402,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(53, 38);
+            this.btnThem.Location = new System.Drawing.Point(53, 23);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(85, 39);
             this.btnThem.TabIndex = 0;
@@ -485,6 +488,17 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
+            // btnTinh
+            // 
+            this.btnTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinh.Location = new System.Drawing.Point(53, 172);
+            this.btnTinh.Name = "btnTinh";
+            this.btnTinh.Size = new System.Drawing.Size(85, 39);
+            this.btnTinh.TabIndex = 0;
+            this.btnTinh.Text = "Tính";
+            this.btnTinh.UseVisualStyleBackColor = true;
+            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
+            // 
             // frmCTHDXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,5 +569,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbKH;
         private System.Windows.Forms.ComboBox cbKH1;
+        private System.Windows.Forms.Button btnTinh;
     }
 }

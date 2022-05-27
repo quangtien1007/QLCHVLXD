@@ -215,6 +215,11 @@ namespace QuanLiVLXD
         private void menuDSHH_Click(object sender, EventArgs e)
         {
             MoForm(new frmDSHH());
-        }  
+        }
+
+        private void menuQLNV_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmNhanVien());
+        }
     }
 }

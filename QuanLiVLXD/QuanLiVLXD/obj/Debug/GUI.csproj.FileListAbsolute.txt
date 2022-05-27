@@ -96,3 +96,4 @@ D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.ReportViewer
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\EPPlus.xml
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmNhanVien.resources

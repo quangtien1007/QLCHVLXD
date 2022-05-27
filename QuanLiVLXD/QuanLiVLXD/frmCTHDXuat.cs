@@ -77,6 +77,20 @@ namespace QuanLiVLXD
             List<DTO_CTHDXUAT> lstCTHDX = BUS_CTHDX.LayCTHDXuat();
             dgDSCTHDX.DataSource = lstCTHDX;
         }
+
+        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            int sl = int.Parse(txtSoLuong.Text);
+            int dg = int.Parse(txtDonGia.Text);
+            int tong = sl * dg;
+            txtThanhTien.Text = tong.ToString();
+        }
+
         public void ColorDataGrid()
         {
             dgDSCTHDX.BorderStyle = BorderStyle.None;
