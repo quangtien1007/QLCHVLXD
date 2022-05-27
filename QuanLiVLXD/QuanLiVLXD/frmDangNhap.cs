@@ -22,5 +22,23 @@ namespace QuanLiVLXD
         {
             this.Close();
         }
+
+        private void frmDangNhap_Enter(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void frmDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap_Click(sender, e);
+            }
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

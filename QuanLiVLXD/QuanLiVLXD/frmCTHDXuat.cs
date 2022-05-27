@@ -57,6 +57,21 @@ namespace QuanLiVLXD
             txtSDT.Text = cbKH1.SelectedValue.ToString();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgDSCTHDX_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            cbHangHoa.Text = dgDSCTHDX.Rows[i].Cells["TenHH1"].Value.ToString();
+            txtSoLuong.Text = dgDSCTHDX.Rows[i].Cells["SoLuong1"].Value.ToString();
+            txtDVT.Text = dgDSCTHDX.Rows[i].Cells["DVT1"].Value.ToString();
+            txtDonGia.Text = dgDSCTHDX.Rows[i].Cells["DonGia1"].Value.ToString();
+            txtXuatXu.Text = dgDSCTHDX.Rows[i].Cells["XuatXu1"].Value.ToString();
+        }
+
         private void HienThiLenDataGrid()
         {
             List<DTO_CTHDXUAT> lstCTHDX = BUS_CTHDX.LayCTHDXuat();

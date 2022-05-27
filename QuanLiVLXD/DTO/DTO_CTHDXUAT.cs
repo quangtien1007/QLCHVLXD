@@ -21,6 +21,7 @@ namespace DTO
         private string XuatXu;
         private int ThanhTien;
         private int IDKHO;
+        private string DVT;
 
         public string SoHDXuat1 { get => SoHDXuat; set => SoHDXuat = value; }
         public string TenKH1 { get => TenKH; set => TenKH = value; }
@@ -35,5 +36,6 @@ namespace DTO
         public string XuatXu1 { get => XuatXu; set => XuatXu = value; }
         public int ThanhTien1 { get => ThanhTien; set => ThanhTien = value; }
         public int IDKHO1 { get => IDKHO; set => IDKHO = value; }
+        public string DVT1 { get => DVT; set => DVT = value; }
     }
 }

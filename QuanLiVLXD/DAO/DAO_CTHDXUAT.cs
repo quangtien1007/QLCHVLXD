@@ -15,7 +15,7 @@ namespace DAO
         public static List<DTO_CTHDXUAT> LayCTHDXuat()
         {
             string sTruyVan = "SELECT c.SO_HD_XUAT,c.SOLUONG_XUAT,c.DONGIA_XUAT,k.TENKH,k.SDT,h.TENHH,n.TENNV,n.DIACHI," +
-                "v.SOLUONG,m.NGAYLAP_XUAT,h.XUATXU from CT_HOADON_XUAT c,KHACHHANG k,NHANVIEN n,KHO v,HOADON_XUAT m,HANGHOA h " +
+                "v.SOLUONG,m.NGAYLAP_XUAT,h.XUATXU,h.DONVITINH from CT_HOADON_XUAT c,KHACHHANG k,NHANVIEN n,KHO v,HOADON_XUAT m,HANGHOA h " +
                 "where c.SO_HD_XUAT=m.SO_HD_XUAT and m.MAKH=k.MAKH and m.MANV=n.MANV and v.MAHH=h.MAHH and c.IDKHO=v.IDKHO";
             con = DataProvider.MoKetNoi();
             DataTable dt = DataProvider.TruyVanLayDuLieu(sTruyVan, con);
@@ -27,6 +27,7 @@ namespace DAO
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 DTO_CTHDXUAT hdx = new DTO_CTHDXUAT();
+                hdx.DVT1 = dt.Rows[i]["DONVITINH"].ToString();
                 hdx.SoHDXuat1 = dt.Rows[i]["So_HD_XUAT"].ToString();
                 hdx.TenKH1 = dt.Rows[i]["TENKH"].ToString();
                 hdx.SDT1 = dt.Rows[i]["SDT"].ToString();

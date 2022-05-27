@@ -43,7 +43,7 @@
             this.button1.Location = new System.Drawing.Point(137, 207);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 50);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Hủy";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -55,9 +55,10 @@
             this.btnDangNhap.Location = new System.Drawing.Point(262, 207);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(135, 50);
-            this.btnDangNhap.TabIndex = 0;
+            this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtTen
             // 
@@ -65,7 +66,7 @@
             this.txtTen.Location = new System.Drawing.Point(235, 111);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(162, 29);
-            this.txtTen.TabIndex = 1;
+            this.txtTen.TabIndex = 0;
             // 
             // txtMatKhau
             // 
@@ -123,6 +124,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDangNhap";
             this.Text = "Login";
+            this.Enter += new System.EventHandler(this.frmDangNhap_Enter);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDangNhap_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

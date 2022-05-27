@@ -16,7 +16,7 @@ namespace QuanLiVLXD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmXuatHang());
+            Application.Run(new frmMain());
         }
     }
 }

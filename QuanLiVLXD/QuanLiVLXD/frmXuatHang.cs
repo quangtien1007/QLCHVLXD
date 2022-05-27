@@ -79,18 +79,19 @@ namespace QuanLiVLXD
             txtNV.Text = dgDSHDX.Rows[i].Cells["MaNV1"].Value.ToString();
             dtpNgayLap.Text = dgDSHDX.Rows[i].Cells["NgayLap1"].Value.ToString();
         }
-
         
-        Form HienThiForm;
-        frmMain fM;
         private void btnXuatHang_Click(object sender, EventArgs e)
         {
-            DTO_HDXUAT hdx = new DTO_HDXUAT();
+            //frmCTHDXuat fCT = new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
+            //DTO_HDXUAT hdx = new DTO_HDXUAT();
             frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text,cbKH.Text,dtpNgayLap.Text,txtNV.Text);
+            //MoForm(new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
             this.Hide();
-            f.ShowDialog();
+            f.Show();
             //MoForm(new frmCTHDXuat());
         }
+        Form HienThiForm;
+        frmMain fM;
         public void MoForm(Form Formmoi)
         {
             if (HienThiForm != null)

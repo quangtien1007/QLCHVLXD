@@ -44,11 +44,6 @@
             this.menuKhachHang = new System.Windows.Forms.ToolStripMenuItem();
             this.loạiHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelCentral = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.sttTTTaiKhoan = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sttTTThoiGian = new System.Windows.Forms.ToolStripStatusLabel();
             this.báoCáoThốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBCK = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBCN = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +52,11 @@
             this.menuDSNCC = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDSLH = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDSHH = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.sttTTTaiKhoan = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sttTTThoiGian = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.panelCentral.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(524, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(404, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,53 +191,6 @@
             this.hàngHóaToolStripMenuItem.Text = "Hàng hóa";
             this.hàngHóaToolStripMenuItem.Click += new System.EventHandler(this.hàngHóaToolStripMenuItem_Click);
             // 
-            // menuHelp
-            // 
-            this.menuHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuHelp.Name = "menuHelp";
-            this.menuHelp.Size = new System.Drawing.Size(78, 24);
-            this.menuHelp.Text = "Trợ giúp";
-            // 
-            // panelCentral
-            // 
-            this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCentral.BackgroundImage")));
-            this.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelCentral.Controls.Add(this.statusStrip1);
-            this.panelCentral.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCentral.Location = new System.Drawing.Point(0, 28);
-            this.panelCentral.Margin = new System.Windows.Forms.Padding(4);
-            this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(1924, 975);
-            this.panelCentral.TabIndex = 28;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.White;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sttTTTaiKhoan,
-            this.sttTTThoiGian});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 945);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1924, 30);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // sttTTTaiKhoan
-            // 
-            this.sttTTTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sttTTTaiKhoan.Name = "sttTTTaiKhoan";
-            this.sttTTTaiKhoan.Size = new System.Drawing.Size(188, 25);
-            this.sttTTTaiKhoan.Text = "toolStripStatusLabel1";
-            // 
-            // sttTTThoiGian
-            // 
-            this.sttTTThoiGian.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sttTTThoiGian.Name = "sttTTThoiGian";
-            this.sttTTThoiGian.Size = new System.Drawing.Size(188, 25);
-            this.sttTTThoiGian.Text = "toolStripStatusLabel2";
-            // 
             // báoCáoThốngKêToolStripMenuItem
             // 
             this.báoCáoThốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -301,6 +254,53 @@
             this.menuDSHH.Size = new System.Drawing.Size(255, 24);
             this.menuDSHH.Text = "Danh sách hàng hóa";
             this.menuDSHH.Click += new System.EventHandler(this.menuDSHH_Click);
+            // 
+            // menuHelp
+            // 
+            this.menuHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuHelp.Name = "menuHelp";
+            this.menuHelp.Size = new System.Drawing.Size(78, 24);
+            this.menuHelp.Text = "Trợ giúp";
+            // 
+            // panelCentral
+            // 
+            this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCentral.BackgroundImage")));
+            this.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelCentral.Controls.Add(this.statusStrip1);
+            this.panelCentral.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelCentral.Location = new System.Drawing.Point(0, 28);
+            this.panelCentral.Margin = new System.Windows.Forms.Padding(4);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(1924, 975);
+            this.panelCentral.TabIndex = 28;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.White;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sttTTTaiKhoan,
+            this.sttTTThoiGian});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 945);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1924, 30);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // sttTTTaiKhoan
+            // 
+            this.sttTTTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sttTTTaiKhoan.Name = "sttTTTaiKhoan";
+            this.sttTTTaiKhoan.Size = new System.Drawing.Size(188, 25);
+            this.sttTTTaiKhoan.Text = "toolStripStatusLabel1";
+            // 
+            // sttTTThoiGian
+            // 
+            this.sttTTThoiGian.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sttTTThoiGian.Name = "sttTTThoiGian";
+            this.sttTTThoiGian.Size = new System.Drawing.Size(188, 25);
+            this.sttTTThoiGian.Text = "toolStripStatusLabel2";
             // 
             // frmMain
             // 

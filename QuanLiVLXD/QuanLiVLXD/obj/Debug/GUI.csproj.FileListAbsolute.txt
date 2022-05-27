@@ -87,3 +87,12 @@ D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSHH.res
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSKH.resources
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSLH.resources
 D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\obj\Debug\QuanLiVLXD.frmDSNCC.resources
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\EPPlus.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\EPPlus.Interfaces.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\EPPlus.System.Drawing.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\EPPlus.xml
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\QuanLiVLXD\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

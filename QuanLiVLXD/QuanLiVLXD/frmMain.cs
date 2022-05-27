@@ -91,7 +91,7 @@ namespace QuanLiVLXD
                 sttTTThoiGian.Text = "";
 
                 //menuNhapHang.Enabled = false;
-                menuQLTK.Enabled = false;
+                menuQLTK.Enabled = true;
                 //menuDoiMK.Enabled = false;
             }
             else
@@ -215,6 +215,6 @@ namespace QuanLiVLXD
         private void menuDSHH_Click(object sender, EventArgs e)
         {
             MoForm(new frmDSHH());
-        }
+        }  
     }
 }

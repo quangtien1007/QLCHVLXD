@@ -45,7 +45,7 @@
             this.rdMa = new System.Windows.Forms.RadioButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgDSCTHDX = new System.Windows.Forms.DataGridView();
+            this.dgDSCTHDN = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.gbKH = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDSCTHDX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDSCTHDN)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbKH.SuspendLayout();
             this.SuspendLayout();
@@ -243,14 +243,14 @@
             this.label5.Text = "CHI TIẾT HÓA ĐƠN NHẬP";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dgDSCTHDX
+            // dgDSCTHDN
             // 
-            this.dgDSCTHDX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDSCTHDX.Location = new System.Drawing.Point(30, 414);
-            this.dgDSCTHDX.Name = "dgDSCTHDX";
-            this.dgDSCTHDX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDSCTHDX.Size = new System.Drawing.Size(919, 192);
-            this.dgDSCTHDX.TabIndex = 26;
+            this.dgDSCTHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDSCTHDN.Location = new System.Drawing.Point(30, 414);
+            this.dgDSCTHDN.Name = "dgDSCTHDN";
+            this.dgDSCTHDN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgDSCTHDN.Size = new System.Drawing.Size(919, 192);
+            this.dgDSCTHDN.TabIndex = 26;
             // 
             // button1
             // 
@@ -261,6 +261,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "In";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnXoa
             // 
@@ -404,7 +405,7 @@
             this.ClientSize = new System.Drawing.Size(1908, 935);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgDSCTHDX);
+            this.Controls.Add(this.dgDSCTHDN);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbKH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -414,7 +415,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDSCTHDX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDSCTHDN)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.gbKH.ResumeLayout(false);
             this.gbKH.PerformLayout();
@@ -442,7 +443,7 @@
         private System.Windows.Forms.RadioButton rdMa;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgDSCTHDX;
+        private System.Windows.Forms.DataGridView dgDSCTHDN;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
