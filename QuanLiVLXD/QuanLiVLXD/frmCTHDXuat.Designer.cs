@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.gbKH = new System.Windows.Forms.GroupBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.cbKH1 = new System.Windows.Forms.ComboBox();
             this.cbKH = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbKH1 = new System.Windows.Forms.ComboBox();
+            this.cbHH1 = new System.Windows.Forms.ComboBox();
             this.cbHangHoa = new System.Windows.Forms.ComboBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -44,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbHH2 = new System.Windows.Forms.ComboBox();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -55,6 +58,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnTinh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -67,10 +71,12 @@
             this.rdTen = new System.Windows.Forms.RadioButton();
             this.rdMa = new System.Windows.Forms.RadioButton();
             this.btnTim = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.cbHH1 = new System.Windows.Forms.ComboBox();
-            this.cbHH2 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtIDX = new System.Windows.Forms.TextBox();
+            this.cbHH3 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtIDKho = new System.Windows.Forms.TextBox();
+            this.cbHH4 = new System.Windows.Forms.ComboBox();
             this.gbKH.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,36 +108,14 @@
             this.gbKH.TabStop = false;
             this.gbKH.Text = "Cập nhật chi tiết hóa đơn xuat";
             // 
-            // cbKH
+            // txtSDT
             // 
-            this.cbKH.FormattingEnabled = true;
-            this.cbKH.Location = new System.Drawing.Point(209, 74);
-            this.cbKH.Name = "cbKH";
-            this.cbKH.Size = new System.Drawing.Size(178, 32);
-            this.cbKH.TabIndex = 4;
-            this.cbKH.SelectedIndexChanged += new System.EventHandler(this.cbKH_SelectedIndexChanged);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cbHH1);
-            this.groupBox3.Controls.Add(this.cbHangHoa);
-            this.groupBox3.Controls.Add(this.txtThanhTien);
-            this.groupBox3.Controls.Add(this.txtDonGia);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtDVT);
-            this.groupBox3.Controls.Add(this.txtXuatXu);
-            this.groupBox3.Controls.Add(this.txtSoLuong);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cbHH2);
-            this.groupBox3.Location = new System.Drawing.Point(14, 190);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(996, 234);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
+            this.txtSDT.Enabled = false;
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(209, 146);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(256, 29);
+            this.txtSDT.TabIndex = 6;
             // 
             // cbKH1
             // 
@@ -143,10 +127,57 @@
             this.cbKH1.TabIndex = 5;
             this.cbKH1.SelectedIndexChanged += new System.EventHandler(this.cbKH1_SelectedIndexChanged);
             // 
+            // cbKH
+            // 
+            this.cbKH.FormattingEnabled = true;
+            this.cbKH.Location = new System.Drawing.Point(209, 74);
+            this.cbKH.Name = "cbKH";
+            this.cbKH.Size = new System.Drawing.Size(178, 32);
+            this.cbKH.TabIndex = 4;
+            this.cbKH.SelectedIndexChanged += new System.EventHandler(this.cbKH_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbHH4);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.cbHH3);
+            this.groupBox3.Controls.Add(this.cbHangHoa);
+            this.groupBox3.Controls.Add(this.txtThanhTien);
+            this.groupBox3.Controls.Add(this.txtDonGia);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.txtDVT);
+            this.groupBox3.Controls.Add(this.txtXuatXu);
+            this.groupBox3.Controls.Add(this.txtIDKho);
+            this.groupBox3.Controls.Add(this.txtIDX);
+            this.groupBox3.Controls.Add(this.txtSoLuong);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.cbHH2);
+            this.groupBox3.Controls.Add(this.cbHH1);
+            this.groupBox3.Location = new System.Drawing.Point(14, 190);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(996, 234);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            // 
+            // cbHH1
+            // 
+            this.cbHH1.FormattingEnabled = true;
+            this.cbHH1.Location = new System.Drawing.Point(195, 51);
+            this.cbHH1.Name = "cbHH1";
+            this.cbHH1.Size = new System.Drawing.Size(256, 32);
+            this.cbHH1.TabIndex = 5;
+            this.cbHH1.SelectedIndexChanged += new System.EventHandler(this.cbHH1_SelectedIndexChanged);
+            this.cbHH1.TextChanged += new System.EventHandler(this.cbHH1_TextChanged);
+            // 
             // cbHangHoa
             // 
             this.cbHangHoa.FormattingEnabled = true;
-            this.cbHangHoa.Location = new System.Drawing.Point(195, 46);
+            this.cbHangHoa.Location = new System.Drawing.Point(195, 49);
             this.cbHangHoa.Name = "cbHangHoa";
             this.cbHangHoa.Size = new System.Drawing.Size(256, 32);
             this.cbHangHoa.TabIndex = 5;
@@ -155,7 +186,7 @@
             // txtThanhTien
             // 
             this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.Location = new System.Drawing.Point(712, 159);
+            this.txtThanhTien.Location = new System.Drawing.Point(712, 147);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(243, 29);
             this.txtThanhTien.TabIndex = 4;
@@ -173,7 +204,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(543, 166);
+            this.label10.Location = new System.Drawing.Point(539, 154);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 24);
             this.label10.TabIndex = 2;
@@ -192,7 +223,7 @@
             // txtDVT
             // 
             this.txtDVT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDVT.Location = new System.Drawing.Point(195, 161);
+            this.txtDVT.Location = new System.Drawing.Point(714, 194);
             this.txtDVT.Name = "txtDVT";
             this.txtDVT.Size = new System.Drawing.Size(256, 29);
             this.txtDVT.TabIndex = 4;
@@ -228,7 +259,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(32, 164);
+            this.label9.Location = new System.Drawing.Point(543, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 24);
             this.label9.TabIndex = 2;
@@ -253,6 +284,16 @@
             this.label3.Size = new System.Drawing.Size(93, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Hàng hóa";
+            // 
+            // cbHH2
+            // 
+            this.cbHH2.FormattingEnabled = true;
+            this.cbHH2.Location = new System.Drawing.Point(195, 49);
+            this.cbHH2.Name = "cbHH2";
+            this.cbHH2.Size = new System.Drawing.Size(256, 32);
+            this.cbHH2.TabIndex = 5;
+            this.cbHH2.SelectedIndexChanged += new System.EventHandler(this.cbHH2_SelectedIndexChanged);
+            this.cbHH2.TextChanged += new System.EventHandler(this.cbHH1_TextChanged);
             // 
             // dtpNgayLap
             // 
@@ -366,6 +407,17 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(72, 463);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(98, 50);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnTinh
             // 
@@ -497,45 +549,60 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // label14
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(72, 463);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(98, 50);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(37, 149);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 24);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "ID Xuất";
             // 
-            // txtSDT
+            // txtIDX
             // 
-            this.txtSDT.Enabled = false;
-            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(209, 146);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(256, 29);
-            this.txtSDT.TabIndex = 6;
+            this.txtIDX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDX.Location = new System.Drawing.Point(195, 149);
+            this.txtIDX.Name = "txtIDX";
+            this.txtIDX.Size = new System.Drawing.Size(256, 29);
+            this.txtIDX.TabIndex = 4;
             // 
-            // cbHH1
+            // cbHH3
             // 
-            this.cbHH1.FormattingEnabled = true;
-            this.cbHH1.Location = new System.Drawing.Point(195, 49);
-            this.cbHH1.Name = "cbHH1";
-            this.cbHH1.Size = new System.Drawing.Size(256, 32);
-            this.cbHH1.TabIndex = 5;
-            this.cbHH1.SelectedIndexChanged += new System.EventHandler(this.cbHH1_SelectedIndexChanged);
-            this.cbHH1.TextChanged += new System.EventHandler(this.cbHH1_TextChanged);
+            this.cbHH3.FormattingEnabled = true;
+            this.cbHH3.Location = new System.Drawing.Point(195, 51);
+            this.cbHH3.Name = "cbHH3";
+            this.cbHH3.Size = new System.Drawing.Size(256, 32);
+            this.cbHH3.TabIndex = 5;
+            this.cbHH3.SelectedIndexChanged += new System.EventHandler(this.cbHH3_SelectedIndexChanged);
+            this.cbHH3.TextChanged += new System.EventHandler(this.cbHH1_TextChanged);
             // 
-            // cbHH2
+            // label15
             // 
-            this.cbHH2.FormattingEnabled = true;
-            this.cbHH2.Location = new System.Drawing.Point(195, 49);
-            this.cbHH2.Name = "cbHH2";
-            this.cbHH2.Size = new System.Drawing.Size(256, 32);
-            this.cbHH2.TabIndex = 5;
-            this.cbHH2.SelectedIndexChanged += new System.EventHandler(this.cbHH2_SelectedIndexChanged);
-            this.cbHH2.TextChanged += new System.EventHandler(this.cbHH1_TextChanged);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(42, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 24);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "ID Kho";
+            // 
+            // txtIDKho
+            // 
+            this.txtIDKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDKho.Location = new System.Drawing.Point(195, 192);
+            this.txtIDKho.Name = "txtIDKho";
+            this.txtIDKho.Size = new System.Drawing.Size(256, 29);
+            this.txtIDKho.TabIndex = 4;
+            // 
+            // cbHH4
+            // 
+            this.cbHH4.FormattingEnabled = true;
+            this.cbHH4.Location = new System.Drawing.Point(195, 51);
+            this.cbHH4.Name = "cbHH4";
+            this.cbHH4.Size = new System.Drawing.Size(256, 32);
+            this.cbHH4.TabIndex = 7;
+            this.cbHH4.SelectedIndexChanged += new System.EventHandler(this.cbHH4_SelectedIndexChanged);
+            this.cbHH4.TextChanged += new System.EventHandler(this.cbHH4_TextChanged);
             // 
             // frmCTHDXuat
             // 
@@ -594,7 +661,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDVT;
-        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -611,5 +677,12 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.ComboBox cbHH1;
         private System.Windows.Forms.ComboBox cbHH2;
+        private System.Windows.Forms.TextBox txtIDX;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtIDKho;
+        private System.Windows.Forms.ComboBox cbHH4;
+        public System.Windows.Forms.TextBox txtSoLuong;
+        public System.Windows.Forms.ComboBox cbHH3;
     }
 }

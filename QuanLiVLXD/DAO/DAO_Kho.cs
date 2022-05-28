@@ -14,7 +14,7 @@ namespace DAO
         static SqlConnection con;
         public static List<DTO_Kho> LayKho()
         {
-            string sTruyVan = "SELECT h.MALOAI,h.TENHH,h.DONVITINH,h.XUATXU,k.SOLUONG from HANGHOA h, KHO k WHERE k.MAHH=h.MAHH";
+            string sTruyVan = "SELECT h.MALOAI,h.TENHH,h.DONVITINH,h.XUATXU,h.MAHH,k.SOLUONG,k.IDKHO from HANGHOA h, KHO k WHERE k.MAHH=h.MAHH";
             con = DataProvider.MoKetNoi();
             DataTable dt = DataProvider.TruyVanLayDuLieu(sTruyVan, con);
             if (dt.Rows.Count == 0)
@@ -27,8 +27,10 @@ namespace DAO
                 DTO_Kho k = new DTO_Kho();
                 k.MaLoai1 = dt.Rows[i]["MALOAI"].ToString();
                 k.TenHang1 = dt.Rows[i]["TENHH"].ToString();
+                k.MaHH1 = dt.Rows[i]["MAHH"].ToString();
                 k.DVT1 = dt.Rows[i]["DONVITINH"].ToString();
                 k.SoLuongKho1 = int.Parse(dt.Rows[i]["SOLUONG"].ToString());
+                k.IDKho1 = int.Parse(dt.Rows[i]["IDKHO"].ToString());
                 k.XuatXu1 = dt.Rows[i]["XUATXU"].ToString();
                 lstKho.Add(k);
             }

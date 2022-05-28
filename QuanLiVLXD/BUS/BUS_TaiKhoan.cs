@@ -18,7 +18,7 @@ namespace BUS
             return DAO_TaiKhoan.LayTaiKhoan(ten, matkhauMH);
         }
         // Hàm mã hóa
-        // Tham khảo tại https://msdn.microsoft.com/enus/library/system.security.cryptography.md5.aspx
+        // Tham khảo tại https://msdn.microsoft.com/enus/library/system.security.cryptography.md5.aspx*/
         public static string GetMd5Hash(MD5 md5Hash, string input)
         {
             // Convert the input string to a byte array and compute the hash.
@@ -34,7 +34,7 @@ namespace BUS
             }
             // Return the hexadecimal string.
             return sBuilder.ToString();
-        }*/
+        }
         public static DTO_TaiKhoan LayTaiKhoan(string ten, string matkhau)
         {
             return DAO_TaiKhoan.LayTaiKhoan(ten, matkhau);

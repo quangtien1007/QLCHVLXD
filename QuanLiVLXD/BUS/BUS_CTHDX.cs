@@ -14,5 +14,13 @@ namespace BUS
         {
             return DAO_CTHDXUAT.LayCTHDXuat();
         }
+        public static bool ThemCTHDX(DTO_CTHDXUAT hdx)
+        {
+            return DAO_CTHDXUAT.ThemCTHDX(hdx);
+        }
+        public static DTO_CTHDXUAT TimTheoMa(string ma)
+        {
+            return DAO_CTHDXUAT.TimTheoMa(ma);
+        }
     }
 }

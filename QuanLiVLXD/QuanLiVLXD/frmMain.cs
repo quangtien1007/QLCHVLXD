@@ -79,7 +79,7 @@ namespace QuanLiVLXD
             }
             HienThiMenu();
         }
-        private void HienThiMenu()
+        public void HienThiMenu()
         {
             menuDangNhap.Enabled = !bDangNhap;
             menuDangXuat.Enabled = bDangNhap;

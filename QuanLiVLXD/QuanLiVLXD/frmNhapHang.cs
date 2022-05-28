@@ -24,7 +24,9 @@ namespace QuanLiVLXD
      
         private void btnNhap_Click(object sender, EventArgs e)
         {
-
+            frmCTHDNhap f = new frmCTHDNhap(txtSoHD.Text,cbNCC.Text, dtpNgayLap.Text, txtNV.Text);
+            this.Hide();
+            f.Show();
         }
         public void SetHeaderText()
         {

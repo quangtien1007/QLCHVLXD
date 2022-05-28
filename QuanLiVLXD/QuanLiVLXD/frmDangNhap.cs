@@ -35,9 +35,12 @@ namespace QuanLiVLXD
                 btnDangNhap_Click(sender, e);
             }
         }
-
+        
+        
+        
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+           
 
         }
     }

@@ -38,6 +38,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.gbKH = new System.Windows.Forms.GroupBox();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.cbNCC = new System.Windows.Forms.ComboBox();
             this.txtNV = new System.Windows.Forms.TextBox();
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNhap = new System.Windows.Forms.Button();
-            this.cbNCC = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.gbKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSHDN)).BeginInit();
@@ -166,12 +166,20 @@
             // 
             // dtpNgayLap
             // 
-            this.dtpNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayLap.CustomFormat = "MM/dd/yyyy";
             this.dtpNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayLap.Location = new System.Drawing.Point(483, 72);
             this.dtpNgayLap.Name = "dtpNgayLap";
             this.dtpNgayLap.Size = new System.Drawing.Size(171, 29);
             this.dtpNgayLap.TabIndex = 3;
+            // 
+            // cbNCC
+            // 
+            this.cbNCC.FormattingEnabled = true;
+            this.cbNCC.Location = new System.Drawing.Point(150, 136);
+            this.cbNCC.Name = "cbNCC";
+            this.cbNCC.Size = new System.Drawing.Size(174, 32);
+            this.cbNCC.TabIndex = 2;
             // 
             // txtNV
             // 
@@ -274,14 +282,6 @@
             this.btnNhap.Text = "Nhập hàng";
             this.btnNhap.UseVisualStyleBackColor = true;
             this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
-            // 
-            // cbNCC
-            // 
-            this.cbNCC.FormattingEnabled = true;
-            this.cbNCC.Location = new System.Drawing.Point(150, 136);
-            this.cbNCC.Name = "cbNCC";
-            this.cbNCC.Size = new System.Drawing.Size(174, 32);
-            this.cbNCC.TabIndex = 2;
             // 
             // frmNhapHang
             // 

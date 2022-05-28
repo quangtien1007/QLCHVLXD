@@ -20,10 +20,19 @@ namespace QuanLiVLXD
         {
             InitializeComponent();
         }
+        private string SoHD, NCC, NhanVien , NgayLap;
+        public frmCTHDNhap(string SoHD, string NCC, string NgayLap, string NhanVien)
+        {
+            InitializeComponent();
+            this.SoHD = SoHD;
+            this.NCC = NCC;
+            this.NgayLap = NgayLap;
+            this.NhanVien = NhanVien;
+        }
         private void HienThiLenDataGrid()
         {
-            List<DTO_CTHDXUAT> lstCTHDX = BUS_CTHDX.LayCTHDXuat();
-            dgDSCTHDN.DataSource = lstCTHDX;
+            List<DTO_CTHDN> lstCTHDN = BUS_CTHDN.LayCTHDN();
+            dgDSCTHDN.DataSource = lstCTHDN;
         }
         public void ColorDataGrid()
         {
@@ -59,10 +68,86 @@ namespace QuanLiVLXD
             obj.ActiveWorkbook.SaveCopyAs(duongdan + tentaptin + ".xlsx");
             obj.ActiveWorkbook.Saved = true;
         }
+        private void HienThiLenComboBox()
+        {
+            List<DTO_Kho> lstHH = BUS_Kho.LayKho();
+            cbHH.DataSource = lstHH;
+            cbHH.DisplayMember = "MaHH1";
+            cbHH.ValueMember = "IDKho1";
+        }
+        private void HienThiLenComboBox1()
+        {
+            List<DTO_DonGia> lstDG = BUS_DonGia.LayDG();
+            cbHH1.DataSource = lstDG;
+            cbHH1.DisplayMember = "TenHH1";
+            cbHH1.ValueMember = "DonGia1";
+        }
+        private void HienThiLenComboBox2()
+        {
+            List<DTO_HangHoa> lstHH = BUS_HangHoa.LayHH();
+            cbHH2.DataSource = lstHH;
+            cbHH2.DisplayMember = "TenHH1";
+            cbHH2.ValueMember = "DVT1";
+        }
+        private void HienThiLenComboBox3()
+        {
+            List<DTO_HangHoa> lstHH = BUS_HangHoa.LayHH();
+            cbHH3.DataSource = lstHH;
+            cbHH3.DisplayMember = "TenHH1";
+            cbHH3.ValueMember = "MaHH1";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             ExportToExcel(dgDSCTHDN, @"D:\LTQL\", "ThongKeKhachHang");
             MessageBox.Show("Đã xuất file Excel thành công ");
+        }
+
+        private void frmCTHDNhap_Load(object sender, EventArgs e)
+        {
+            HienThiLenDataGrid();
+            ColorDataGrid();
+            HienThiLenComboBox();
+            HienThiLenComboBox1();
+            HienThiLenComboBox2();
+            HienThiLenComboBox3();
+            txtSoHD.Text = this.SoHD;
+            txtNCC.Text = this.NCC;
+            dtpNgayLap.Text = this.NgayLap;
+            txtNV.Text = this.NhanVien;
+        }
+
+        private void cbHH1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDonGia.Text = cbHH1.SelectedValue.ToString();
+        }
+
+        private void cbHH2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDVT.Text = cbHH2.SelectedValue.ToString();
+        }
+
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            int sl = int.Parse(txtSoLuong.Text);
+            int dg = int.Parse(txtDonGia.Text);
+            int tong = sl * dg;
+            txtThanhTien.Text = tong.ToString();
+        }
+
+        private void cbHH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtIDN.Text = cbHH.SelectedValue.ToString();
+        }
+
+        private void cbHH1_TextChanged(object sender, EventArgs e)
+        {
+            cbHH2.Text = cbHH1.Text;
+            cbHH3.Text = cbHH1.Text;
+        }
+
+        private void cbHH3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbHH.Text = cbHH3.SelectedValue.ToString();
         }
     }
 }

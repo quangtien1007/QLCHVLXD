@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DAO_BCNhap.cs" />
     <Compile Include="DAO_BCXuat.cs" />
+    <Compile Include="DAO_CTHDN.cs" />
     <Compile Include="DAO_CTHDXUAT.cs" />
     <Compile Include="DAO_DonGia.cs" />
     <Compile Include="DAO_HangHoa.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="DAO_TaiKhoan.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DAO_LoaiHang.cs" />
+    <Compile Include="NewFolder1\DataProvider1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

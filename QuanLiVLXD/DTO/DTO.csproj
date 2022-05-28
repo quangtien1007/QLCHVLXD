@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DTO_BCNhap.cs" />
     <Compile Include="DTO_BCXuat.cs" />
+    <Compile Include="DTO_CTHDN.cs" />
     <Compile Include="DTO_CTHDXUAT.cs" />
     <Compile Include="DTO_DonGia.cs" />
     <Compile Include="DTO_HangHoa.cs" />

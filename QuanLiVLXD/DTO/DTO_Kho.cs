@@ -13,6 +13,8 @@ namespace DTO
         private int SoLuongKho;
         private string XuatXu;
         private string MaLoai;
+        private int IDKho;
+        private string MaHH;
 
 
         public string TenHang1 { get => TenHang; set => TenHang = value; }
@@ -20,7 +22,7 @@ namespace DTO
         public int SoLuongKho1 { get => SoLuongKho; set => SoLuongKho = value; }
         public string MaLoai1 { get => MaLoai; set => MaLoai = value; }
         public string XuatXu1 { get => XuatXu; set => XuatXu = value; }
-   
- 
+        public int IDKho1 { get => IDKho; set => IDKho = value; }
+        public string MaHH1 { get => MaHH; set => MaHH = value; }
     }
 }
