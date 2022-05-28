@@ -36,6 +36,7 @@
             this.menuDoiMK = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQLTK = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQLNV = new System.Windows.Forms.ToolStripMenuItem();
             this.tacVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGiaoHang = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.sttTTTaiKhoan = new System.Windows.Forms.ToolStripStatusLabel();
             this.sttTTThoiGian = new System.Windows.Forms.ToolStripStatusLabel();
-            this.menuQLNV = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelCentral.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -128,6 +128,13 @@
             this.menuQLTK.Size = new System.Drawing.Size(199, 24);
             this.menuQLTK.Text = "Quản lí tài khoản";
             this.menuQLTK.Click += new System.EventHandler(this.menuQLTK_Click);
+            // 
+            // menuQLNV
+            // 
+            this.menuQLNV.Name = "menuQLNV";
+            this.menuQLNV.Size = new System.Drawing.Size(199, 24);
+            this.menuQLNV.Text = "Quản lí nhân viên";
+            this.menuQLNV.Click += new System.EventHandler(this.menuQLNV_Click);
             // 
             // tacVuToolStripMenuItem
             // 
@@ -303,13 +310,6 @@
             this.sttTTThoiGian.Name = "sttTTThoiGian";
             this.sttTTThoiGian.Size = new System.Drawing.Size(188, 25);
             this.sttTTThoiGian.Text = "toolStripStatusLabel2";
-            // 
-            // menuQLNV
-            // 
-            this.menuQLNV.Name = "menuQLNV";
-            this.menuQLNV.Size = new System.Drawing.Size(199, 24);
-            this.menuQLNV.Text = "Quản lí nhân viên";
-            this.menuQLNV.Click += new System.EventHandler(this.menuQLNV_Click);
             // 
             // frmMain
             // 

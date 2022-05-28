@@ -410,7 +410,7 @@
             this.Controls.Add(this.gbKH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCTHDNhap";
-            this.Text = "frmCTHDXuat";
+            this.Text = "frmCTHDNhap";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

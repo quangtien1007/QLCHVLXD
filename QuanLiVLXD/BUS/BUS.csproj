@@ -44,6 +44,7 @@
     <Compile Include="BUS_BCNhap.cs" />
     <Compile Include="BUS_BCXuat.cs" />
     <Compile Include="BUS_CTHDX.cs" />
+    <Compile Include="BUS_DonGia.cs" />
     <Compile Include="BUS_HangHoa.cs" />
     <Compile Include="BUS_HDNHAP.cs" />
     <Compile Include="BUS_HDXUAT.cs" />

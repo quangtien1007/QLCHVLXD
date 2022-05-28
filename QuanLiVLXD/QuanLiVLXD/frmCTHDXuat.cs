@@ -15,16 +15,17 @@ namespace QuanLiVLXD
 {
     public partial class frmCTHDXuat : Form
     {
-        private string SoHD, KhachHang, NhanVien,NgayLap;
+        private string SoHD, KhachHang,KhachHang1,NhanVien,NgayLap;
         public frmCTHDXuat()
         {
             InitializeComponent();
         }
-        public frmCTHDXuat(string SoHD,string KhachHang,string NgayLap,string NhanVien)
+        public frmCTHDXuat(string SoHD,string KhachHang,string KhachHang1, string NgayLap,string NhanVien)
         {
             InitializeComponent();
             this.SoHD = SoHD;
             this.KhachHang = KhachHang;
+            this.KhachHang1 = KhachHang1;
             this.NgayLap = NgayLap;
             this.NhanVien = NhanVien;
         }
@@ -56,7 +57,27 @@ namespace QuanLiVLXD
         {
             txtSDT.Text = cbKH1.SelectedValue.ToString();
         }
-
+        private void HienThiLenComBox2()
+        {
+            List<DTO_HangHoa> lstHH = BUS_HangHoa.LayHH();
+            cbHangHoa.DataSource = lstHH;
+            cbHangHoa.DisplayMember = "TenHH1";
+            cbHangHoa.ValueMember = "DVT1";
+        }
+        private void HienThiLenComBox3()
+        {
+            List<DTO_HangHoa> lstHH = BUS_HangHoa.LayHH();
+            cbHH1.DataSource = lstHH;
+            cbHH1.DisplayMember = "TenHH1";
+            cbHH1.ValueMember = "XuatXu1";
+        }
+        private void HienThiLenComBox4()
+        {
+            List<DTO_DonGia> lstDG = BUS_DonGia.LayDG();
+            cbHH2.DataSource = lstDG;
+            cbHH2.DisplayMember = "TenHH1";
+            cbHH2.ValueMember = "DonGia1";
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
 
@@ -81,6 +102,44 @@ namespace QuanLiVLXD
         private void txtThanhTien_TextChanged(object sender, EventArgs e)
         {
           
+        }
+
+        private void menuDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDVT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbHH1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtXuatXu.Text = cbHH1.SelectedValue.ToString();
+        }
+
+        private void cbHangHoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDVT.Text = cbHangHoa.SelectedValue.ToString();
+        }
+
+        private void cbHH1_TextChanged(object sender, EventArgs e)
+        {
+            cbHangHoa.Text = cbHH1.Text;
+            cbHH2.Text = cbHH1.Text;
+        }
+
+        private void cbHH2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDonGia.Text = cbHH2.SelectedValue.ToString();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmMain f = new frmMain();
+            this.Hide();
+            f.Show();
         }
 
         private void btnTinh_Click(object sender, EventArgs e)
@@ -112,8 +171,12 @@ namespace QuanLiVLXD
             ColorDataGrid();
             HienThiLenComboBox();
             HienThiLenComboBox1();
+            HienThiLenComBox2();
+            HienThiLenComBox3();
+            HienThiLenComBox4();
             txtSoHD.Text = this.SoHD;
             cbKH.Text = this.KhachHang;
+            cbKH1.Text = this.KhachHang1;
             dtpNgayLap.Text = this.NgayLap;
             txtTenNV.Text = this.NhanVien;
         }

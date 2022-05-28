@@ -57,7 +57,7 @@
             // 
             // dtpNgayLap
             // 
-            this.dtpNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayLap.CustomFormat = "MM/dd/yyyy";
             this.dtpNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayLap.Location = new System.Drawing.Point(483, 72);
             this.dtpNgayLap.Name = "dtpNgayLap";

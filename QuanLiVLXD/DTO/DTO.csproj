@@ -46,6 +46,7 @@
     <Compile Include="DTO_BCNhap.cs" />
     <Compile Include="DTO_BCXuat.cs" />
     <Compile Include="DTO_CTHDXUAT.cs" />
+    <Compile Include="DTO_DonGia.cs" />
     <Compile Include="DTO_HangHoa.cs" />
     <Compile Include="DTO_HDXUAT.cs" />
     <Compile Include="DTO_KhachHang.cs" />

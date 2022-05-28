@@ -84,29 +84,13 @@ namespace QuanLiVLXD
         {
             //frmCTHDXuat fCT = new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
             //DTO_HDXUAT hdx = new DTO_HDXUAT();
-            frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text,cbKH.Text,dtpNgayLap.Text,txtNV.Text);
-            //MoForm(new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
+            frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text,cbKH.Text,cbKH.Text,dtpNgayLap.Text,txtNV.Text);
             this.Hide();
             f.Show();
+            //MoForm(new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text));
             //MoForm(new frmCTHDXuat());
         }
-        Form HienThiForm;
-        frmMain fM;
-        public void MoForm(Form Formmoi)
-        {
-            if (HienThiForm != null)
-            {
-                HienThiForm.Close();
-            }
-            HienThiForm = Formmoi;
-            Formmoi.TopLevel = false;
-            Formmoi.FormBorderStyle = FormBorderStyle.None;
-            Formmoi.Dock = DockStyle.Fill;
-            fM.panelCentral.Controls.Add(Formmoi);
-            fM.panelCentral.Tag = Formmoi;
-            Formmoi.BringToFront();
-            Formmoi.Show();
-        }
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {

@@ -40,6 +40,16 @@ CREATE TABLE HANGHOA
 )
 GO 
 
+CREATE TABLE DONGIA
+(
+	MADG VARCHAR(15) PRIMARY KEY,
+	DONGIA INT,
+	MAHH VARCHAR(15),
+	TENHH NVARCHAR(50),
+	FOREIGN KEY(MAHH) REFERENCES HANGHOA(MAHH)
+)
+
+
 CREATE TABLE NHANVIEN
 (
 	MANV VARCHAR(15) PRIMARY KEY,
@@ -133,6 +143,7 @@ INSERT INTO KHACHHANG VALUES
 ('KH0006',N'Cristiano Ronaldo','Madeira, Portugal','082773729')
 select * from KHACHHANG
 
+
 INSERT INTO NHANVIEN VALUES
 ('NV0001',N'Lionel Messi','Nam','6/24/1987','Argentina','09837377',N'Nhân viên',1),
 ('NV0002',N'Lê Phạm Phương Vy',N'Nữ','4/27/2002',N'Tân Châu, An Giang','087373727',N'Nhân viên',1),
@@ -153,7 +164,26 @@ INSERT INTO LOAIHANG VALUES
 ('Cat',N'Cát',N'Cát gồm: Cát mịn, nền','Còn kinh doanh'),
 ('Kem',N'Kẽm',N'Kẽm gồm: Kẽm phi, cuộn ly','Còn kinh doanh')
 select * from LOAIHANG
-
+drop table DONGIA
+INSERT INTO DONGIA VALUES
+('DG01',200000,'TON01',N'Tôn lạnh'),
+('DG02',150000,'TON02',N'Tôn nóng'),
+('DG03',100000,'THEP01',N'Thép cuộn'),
+('DG04',120000,'THEP02',N'Thép phi'),
+('DG05',500000,'GACH01',N'Gạch ống'),
+('DG06',400000,'GACH02',N'Gạch thẻ'),
+('DG07',100000,'XM01',N'Xi măng PCB'),
+('DG08',110000,'XM02',N'Xi măng Hà Tiên'),
+('DG09',70000,'NHOM01',N'Nhôm thanh'),
+('DG10',100000,'NHOM02',N'Nhôm uốn'),
+('DG11',80000,'KEM01',N'Kẽm phi'),
+('DG12',100000,'KEM02',N'Kẽm cuộn'),
+('DG13',300000,'CAT01',N'Cát mịn'),
+('DG14',400000,'CAT02',N'Cát nền'),
+('DG15',450000,'DA01',N'Đá 1x2'),
+('DG16',500000,'DA02',N'Đá 2x3'),
+('DG17',500000,'DA03',N'Đá 4x6')
+SELECT * FROM DONGIA
 
 INSERT INTO HANGHOA VALUES
 ('TON01','Ton',N'Tôn lạnh',N'Tấm',N'Việt Nam'),
@@ -174,6 +204,8 @@ INSERT INTO HANGHOA VALUES
 ('DA02','Da',N'Đá 2x3',N'Khối',N'Việt Nam'),
 ('DA03','Da',N'Đá 4x6',N'Khối',N'Việt Nam')
 select * from HANGHOA
+
+
 
 INSERT INTO NHACUNGCAP VALUES
 ('NCC00001',N'Tôn Hoa Sen',N'TP.HCM','08321567'),
