@@ -316,7 +316,6 @@
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtTim;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox gbKH;
@@ -332,5 +331,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnNhap;
         private System.Windows.Forms.ComboBox cbNCC;
+        public System.Windows.Forms.Button btnXoa;
     }
 }

@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{D74195E6-7E07-4396-9606-4BC36A71CE7F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupProject", "SetupProject\SetupProject.vdproj", "{1832ABB4-3DDC-413E-8AF9-529E06E98D62}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup4", "Setup4\Setup4.vdproj", "{9A2665D2-0677-4014-A365-B6CCE83D39A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{67348965-441A-48CD-9253-8B6935F27865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67348965-441A-48CD-9253-8B6935F27865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67348965-441A-48CD-9253-8B6935F27865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1832ABB4-3DDC-413E-8AF9-529E06E98D62}.Debug|Any CPU.ActiveCfg = Debug
+		{1832ABB4-3DDC-413E-8AF9-529E06E98D62}.Release|Any CPU.ActiveCfg = Release
+		{9A2665D2-0677-4014-A365-B6CCE83D39A6}.Debug|Any CPU.ActiveCfg = Debug
+		{9A2665D2-0677-4014-A365-B6CCE83D39A6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

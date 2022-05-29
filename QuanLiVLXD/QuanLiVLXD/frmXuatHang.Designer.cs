@@ -326,7 +326,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXuatHang;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtTim;
@@ -334,5 +333,6 @@
         private System.Windows.Forms.RadioButton rdTen;
         private System.Windows.Forms.RadioButton rdMa;
         private System.Windows.Forms.Button btnTim;
+        public System.Windows.Forms.Button btnXoa;
     }
 }

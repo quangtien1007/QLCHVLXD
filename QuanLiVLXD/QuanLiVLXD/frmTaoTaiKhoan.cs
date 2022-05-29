@@ -18,7 +18,18 @@ namespace QuanLiVLXD
         {
             InitializeComponent();
         }
-
+        public String GetMD5(string txt)
+        {
+            String str = "";
+            Byte[] buffer = System.Text.Encoding.UTF8.GetBytes(txt);
+            System.Security.Cryptography.MD5CryptoServiceProvider md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            buffer = md5.ComputeHash(buffer);
+            foreach (Byte b in buffer)
+            {
+                str += b.ToString("x2");
+            }
+            return str;
+        }
         private void btnDangki_Click(object sender, EventArgs e)
         {
             if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
@@ -33,7 +44,7 @@ namespace QuanLiVLXD
             }
             DTO_TaiKhoan tk = new DTO_TaiKhoan();
             tk.STen = txtTaiKhoan.Text;
-            tk.SMatKhau = txtMatKhau.Text;
+            tk.SMatKhau = GetMD5(txtMatKhau.Text);
             tk.IQuyen = 2;
             if (BUS_TaiKhoan.ThemTaiKhoan(tk) == false)
             {

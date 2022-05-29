@@ -1,0 +1,9 @@
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Release\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Release\DAO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Release\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\bin\Release\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Release\DAO.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Release\DAO.csproj.CopyComplete
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Release\DAO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DAO\obj\Release\DAO.pdb

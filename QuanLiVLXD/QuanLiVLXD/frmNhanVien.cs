@@ -18,6 +18,7 @@ namespace QuanLiVLXD
         {
             InitializeComponent();
         }
+        public DTO_TaiKhoan TaiKhoan;
         public void SetHeaderText()
         {
             dgDSNV.Columns["TenNV1"].HeaderText = "Tên nhân viên";
@@ -80,13 +81,13 @@ namespace QuanLiVLXD
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
                 return;
             }
-            // Kiểm tra mã hàng hóa có độ dài chuỗi hợp lệ hay không
+            // Kiểm tra mã có độ dài chuỗi hợp lệ hay không
             if (txtMaNV.Text.Length > 6)
             {
                 MessageBox.Show("Mã nhân viên tối đa 6 ký tự!");
                 return;
             }
-            // Kiểm tra mã hàng hóa có bị trùng không
+            // Kiểm tra mã có bị trùng không
             if (BUS_NhanVien.TimNhanVienTheoMa(txtMaNV.Text) != null)
             {
                 MessageBox.Show("Mã nhân viên đã tồn tại! Vui lòng chọn mã khác.");
@@ -150,25 +151,25 @@ namespace QuanLiVLXD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã nhân viên có tồn tại không
-            if (BUS_NhanVien.TimNhanVienTheoMa(txtMaNV.Text) == null)
-            {
-                MessageBox.Show("Mã nhân viên không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_NhanVien
-            DTO_NhanVien nv = new DTO_NhanVien();
-            nv.MaNV1 = txtMaNV.Text;
+                    // Kiểm tra mã nhân viên có tồn tại không
+                    if (BUS_NhanVien.TimNhanVienTheoMa(txtMaNV.Text) == null)
+                    {
+                        MessageBox.Show("Mã nhân viên không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_NhanVien
+                    DTO_NhanVien nv = new DTO_NhanVien();
+                    nv.MaNV1 = txtMaNV.Text;
 
-            // Thực hiện xóa 
-            if (BUS_NhanVien.XoaNhanVien(nv) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa nhân viên.");
-        }
+                    // Thực hiện xóa 
+                    if (BUS_NhanVien.XoaNhanVien(nv) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa nhân viên.");
+    }
 
         private void btnTim_Click(object sender, EventArgs e)
         {

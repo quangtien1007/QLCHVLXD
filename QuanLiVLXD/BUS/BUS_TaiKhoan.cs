@@ -11,7 +11,8 @@ namespace BUS
 {
     public class BUS_TaiKhoan
     {
-        /*public static DTO_TaiKhoan LayTaiKhoan(string ten, string matkhau)
+        
+        public static DTO_TaiKhoan LayTaiKhoan1(string ten, string matkhau)
         {
             MD5 md5Hash = MD5.Create();
             string matkhauMH = BUS_TaiKhoan.GetMd5Hash(md5Hash, matkhau);
@@ -34,10 +35,6 @@ namespace BUS
             }
             // Return the hexadecimal string.
             return sBuilder.ToString();
-        }
-        public static DTO_TaiKhoan LayTaiKhoan(string ten, string matkhau)
-        {
-            return DAO_TaiKhoan.LayTaiKhoan(ten, matkhau);
         }
         public static List<DTO_TaiKhoan> LayTKhoan()
         {

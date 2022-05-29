@@ -11,17 +11,19 @@ using DTO;
 using DAO;
 using BUS;
 using System.Data.SqlClient;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace QuanLiVLXD
 {
     public partial class frmCTHDXuat : Form
     {
-        private string SoHD, KhachHang,KhachHang1,NhanVien,NgayLap;
+        private string SoHD, KhachHang, KhachHang1, NhanVien, NgayLap;
         public frmCTHDXuat()
         {
             InitializeComponent();
         }
-        public frmCTHDXuat(string SoHD,string KhachHang,string KhachHang1, string NgayLap,string NhanVien)
+        public frmCTHDXuat(string SoHD, string KhachHang, string KhachHang1, string NgayLap, string NhanVien)
         {
             InitializeComponent();
             this.SoHD = SoHD;
@@ -33,7 +35,7 @@ namespace QuanLiVLXD
 
         private void txtSDT_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         public void HienThiLenComboBox()
         {
@@ -119,11 +121,19 @@ namespace QuanLiVLXD
             h.IDKHO1 = int.Parse(txtIDKho.Text);
             h.SoHDXuat1 = txtSoHD.Text;
             h.SoLuong1 = int.Parse(txtSoLuong.Text);
-            h.DonGia1 = int.Parse(txtThanhTien.Text);      
+            h.ThanhTien1 = int.Parse(txtThanhTien.Text);
+            DTO_Kho k = new DTO_Kho();
+            k.SoLuongKho1 = int.Parse(txtSoLuong.Text);
+            k.IDKho1 = int.Parse(txtIDKho.Text);
             // Thực hiện thêm
             if (BUS_CTHDX.ThemCTHDX(h) == false)
             {
                 MessageBox.Show("Không thêm được.");
+                return;
+            }
+            if (BUS_Kho.xuatkho(k) == false)
+            {
+                MessageBox.Show("Không update được.");
                 return;
             }
             HienThiLenDataGrid();
@@ -148,7 +158,7 @@ namespace QuanLiVLXD
 
         private void txtThanhTien_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void menuDangNhap_Click(object sender, EventArgs e)
@@ -195,6 +205,105 @@ namespace QuanLiVLXD
         private void cbHH4_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbHH3.Text = cbHH4.SelectedValue.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu có bị bỏ trống
+            if (txtIDKho.Text == "" || txtIDX.Text == "" || txtDonGia.Text == "" || txtSoHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
+                return;
+            }
+            // Kiểm tra mã có bị trùng không
+            if (BUS_CTHDX.TimTheoMa(txtIDX.Text) == null)
+            {
+                MessageBox.Show("Mã không tồn tại! Vui lòng chọn mã khác.");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_KhachHang
+            DTO_CTHDXUAT h = new DTO_CTHDXUAT();
+            h.IDXUAT1 = int.Parse(txtIDX.Text);
+            h.IDKHO1 = int.Parse(txtIDKho.Text);
+            h.SoHDXuat1 = txtSoHD.Text;
+            h.SoLuong1 = int.Parse(txtSoLuong.Text);
+            h.ThanhTien1 = int.Parse(txtThanhTien.Text);
+            // Thực hiện thêm
+            if (BUS_CTHDX.CapNhatCTHDX(h) == false)
+            {
+                MessageBox.Show("Không sửa được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã sửa.");
+        }
+        public DTO_TaiKhoan TaiKhoan;
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã có tồn tại không
+                    if (BUS_CTHDX.TimTheoMa(txtIDX.Text) == null)
+                    {
+                        MessageBox.Show("Mã không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_CTHDXUAT
+                    DTO_CTHDXUAT x = new DTO_CTHDXUAT();
+                    x.IDXUAT1 = int.Parse(txtIDX.Text);
+
+                    // Thực hiện xóa 
+                    if (BUS_CTHDX.XoaCTHDX(x) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
+        }
+    }
+        private void ExportToExcel(DataGridView g, string duongdan, string tentaptin)
+        {
+            app obj = new app();
+            obj.Application.Workbooks.Add(Type.Missing);
+            obj.Columns.ColumnWidth = 25;
+            for (int i = 1; i < g.Columns.Count + 1; i++)
+            {
+                obj.Cells[1, i] = g.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < g.Rows.Count; i++)
+            {
+                for (int j = 0; j < g.Columns.Count; j++)
+                {
+                    if (g.Rows[i].Cells[j].Value != null)
+                        obj.Cells[i + 2, j + 1] = g.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            obj.ActiveWorkbook.SaveCopyAs(duongdan + tentaptin + ".xlsx");
+            obj.ActiveWorkbook.Saved = true;
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(dgDSCTHDX, @"D:\LTQL\", "CTHDX");
+            MessageBox.Show("Đã xuất file Excel thành công");
+        }
+
+        
+        private void btnInPX_Click(object sender, EventArgs e)
+        {
+            frmPhieuXuat f = new frmPhieuXuat(cbKH1.Text, txtDiaChi.Text, txtSDT.Text, cbHH4.Text, dtpNgayLap.Text,int.Parse(txtSoLuong.Text), int.Parse(txtThanhTien.Text), txtTenNV.Text, txtTenNV.Text);
+            this.Hide();
+            f.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

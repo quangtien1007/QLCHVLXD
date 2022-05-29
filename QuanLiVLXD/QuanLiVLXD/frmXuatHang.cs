@@ -68,7 +68,7 @@ namespace QuanLiVLXD
 
         private void cbKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgDSHDX_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,12 +79,12 @@ namespace QuanLiVLXD
             txtNV.Text = dgDSHDX.Rows[i].Cells["MaNV1"].Value.ToString();
             dtpNgayLap.Text = dgDSHDX.Rows[i].Cells["NgayLap1"].Value.ToString();
         }
-        
+
         private void btnXuatHang_Click(object sender, EventArgs e)
         {
             //frmCTHDXuat fCT = new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
             //DTO_HDXUAT hdx = new DTO_HDXUAT();
-            frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text,cbKH.Text,cbKH.Text,dtpNgayLap.Text,txtNV.Text);
+            frmCTHDXuat f = new frmCTHDXuat(txtSoHD.Text, cbKH.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text);
             this.Hide();
             f.Show();
             //MoForm(new frmCTHDXuat(txtSoHD.Text, cbKH.Text, dtpNgayLap.Text, txtNV.Text));
@@ -185,27 +185,39 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã cập nhật hóa đơn.");
         }
-
+        public DTO_TaiKhoan TaiKhoan;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã NCC có tồn tại không
-            if (BUS_HDXUAT.TimHDXTheoMa(txtSoHD.Text) == null)
-            {
-                MessageBox.Show("Số hóa đơn không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_NCC
-            DTO_HDXUAT hdx = new DTO_HDXUAT();
-            hdx.SoHDXuat1 = txtSoHD.Text;
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã NCC có tồn tại không
+                    if (BUS_HDXUAT.TimHDXTheoMa(txtSoHD.Text) == null)
+                    {
+                        MessageBox.Show("Số hóa đơn không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_NCC
+                    DTO_HDXUAT hdx = new DTO_HDXUAT();
+                    hdx.SoHDXuat1 = txtSoHD.Text;
 
-            // Thực hiện xóa 
-            if (BUS_HDXUAT.XoaHDX(hdx) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa hóa đơn.");
+                    // Thực hiện xóa 
+                    if (BUS_HDXUAT.XoaHDX(hdx) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa hóa đơn.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
         }
+    }
     }
 }

@@ -79,6 +79,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(422, 29);
             this.txtSDT.TabIndex = 1;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // txtDiaChi
             // 
@@ -308,7 +309,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgDSNCC;
@@ -318,5 +318,6 @@
         private System.Windows.Forms.RadioButton rdMa;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Button btnTim;
+        public System.Windows.Forms.Button btnXoa;
     }
 }

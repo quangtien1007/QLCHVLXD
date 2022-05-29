@@ -37,6 +37,22 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return lstKho;
         }
-        
+        public static bool nhapkho(DTO_Kho k)
+        {
+            string sTruyVan = string.Format(@"UPDATE KHO SET SOLUONG=SOLUONG+{0} WHERE MAHH=N'{1}'", k.SoLuongKho1,k.MaHH1);
+            con = DataProvider.MoKetNoi();
+            bool kq = DataProvider.TruyVanKhongLayDuLieu(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return kq;
+        }
+        public static bool xuatkho(DTO_Kho k)
+        {
+            string sTruyVan = string.Format(@"UPDATE KHO SET SOLUONG=SOLUONG-{0} WHERE IDKHO={1}", k.SoLuongKho1, k.IDKho1);
+            con = DataProvider.MoKetNoi();
+            bool kq = DataProvider.TruyVanKhongLayDuLieu(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return kq;
+        }
+
     }
 }

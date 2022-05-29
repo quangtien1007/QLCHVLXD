@@ -127,28 +127,39 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã sửa loại hàng.");
         }
-
+        public DTO_TaiKhoan TaiKhoan;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã loại có tồn tại không
-            if (BUS_LoaiHang.TimLoaiHangTheoMa(txtMaLoai.Text) == null)
-            {
-                MessageBox.Show("Mã loại hàng không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_LoaiHang
-            DTO_LoaiHang lh = new DTO_LoaiHang();
-            lh.MaLoai1 = txtMaLoai.Text;
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã loại có tồn tại không
+                    if (BUS_LoaiHang.TimLoaiHangTheoMa(txtMaLoai.Text) == null)
+                    {
+                        MessageBox.Show("Mã loại hàng không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_LoaiHang
+                    DTO_LoaiHang lh = new DTO_LoaiHang();
+                    lh.MaLoai1 = txtMaLoai.Text;
 
-            // Thực hiện xóa 
-            if (BUS_LoaiHang.XoaLoaiHang(lh) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa loại hàng.");
-        }
+                    // Thực hiện xóa 
+                    if (BUS_LoaiHang.XoaLoaiHang(lh) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa loại hàng.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
+        } }
 
         private void dgDSLH_CellClick(object sender, DataGridViewCellEventArgs e)
         {

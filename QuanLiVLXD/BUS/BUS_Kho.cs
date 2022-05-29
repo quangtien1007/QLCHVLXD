@@ -14,5 +14,13 @@ namespace BUS
         {
             return DAO_Kho.LayKho();
         }
+        public static bool nhapkho(DTO_Kho k)
+        {
+            return DAO_Kho.nhapkho(k);
+        }
+        public static bool xuatkho(DTO_Kho k)
+        {
+            return DAO_Kho.xuatkho(k);
+        }
     }
 }

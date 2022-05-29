@@ -150,27 +150,39 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã sửa nhân viên.");
         }
-
+        public DTO_TaiKhoan TaiKhoan;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã hàng hóa có tồn tại không
-            if (BUS_HangHoa.TimHangHoaTheoMa(txtMaHH.Text) == null)
-            {
-                MessageBox.Show("Mã hàng hóa không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_HangHoa
-            DTO_HangHoa hh = new DTO_HangHoa();
-            hh.MaHH1 = txtMaHH.Text;
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã hàng hóa có tồn tại không
+                    if (BUS_HangHoa.TimHangHoaTheoMa(txtMaHH.Text) == null)
+                    {
+                        MessageBox.Show("Mã hàng hóa không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_HangHoa
+                    DTO_HangHoa hh = new DTO_HangHoa();
+                    hh.MaHH1 = txtMaHH.Text;
 
-            // Thực hiện xóa 
-            if (BUS_HangHoa.XoaHangHoa(hh) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa hàng hóa.");
+                    // Thực hiện xóa 
+                    if (BUS_HangHoa.XoaHangHoa(hh) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa hàng hóa.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
+                 }
         }
 
         private void btnTim_Click(object sender, EventArgs e)

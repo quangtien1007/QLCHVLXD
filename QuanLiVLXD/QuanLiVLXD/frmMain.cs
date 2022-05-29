@@ -64,7 +64,7 @@ namespace QuanLiVLXD
             fDN = new frmDangNhap();
             if (fDN.ShowDialog() == DialogResult.OK)
             {
-                TaiKhoan = BUS_TaiKhoan.LayTaiKhoan(fDN.txtTen.Text, fDN.txtMatKhau.Text);
+                TaiKhoan = BUS_TaiKhoan.LayTaiKhoan1(fDN.txtTen.Text, fDN.txtMatKhau.Text);
                 if (TaiKhoan != null)
                 {
                     bDangNhap = true;
@@ -79,6 +79,7 @@ namespace QuanLiVLXD
             }
             HienThiMenu();
         }
+        
         public void HienThiMenu()
         {
             menuDangNhap.Enabled = !bDangNhap;
@@ -90,9 +91,13 @@ namespace QuanLiVLXD
                 sttTTTaiKhoan.Text = "Chưa đăng nhập";
                 sttTTThoiGian.Text = "";
 
-                //menuNhapHang.Enabled = false;
-                menuQLTK.Enabled = true;
-                //menuDoiMK.Enabled = false;
+                menuNhapHang.Enabled = false;
+                menuQLTK.Visible = false ;
+                menuDoiMK.Enabled = false;
+                menuTaoTK.Enabled = true;
+                menuQLNV.Visible = false;
+                menuBaoCao.Visible = false;
+                menuTacVu.Enabled = false;
             }
             else
             {
@@ -102,20 +107,38 @@ namespace QuanLiVLXD
                 else
                 {
                     quyen = TaiKhoan.IQuyen;
-                    sttTTTaiKhoan.Text = "Chào " + TaiKhoan.STen + "! ";
-                    sttTTThoiGian.Text = "Thời điểm đăng nhập: " + DateTime.Now;
+                    if (quyen == 1)
+                    {
+                        sttTTTaiKhoan.Text = "Chào " + TaiKhoan.STen + "! (Admin)";
+                        sttTTThoiGian.Text = "Thời điểm đăng nhập: " + DateTime.Now;
+                    }
+                    else if(quyen == 2)
+                    {
+                        sttTTTaiKhoan.Text = "Chào " + TaiKhoan.STen + "! (User)";
+                        sttTTThoiGian.Text = "Thời điểm đăng nhập: " + DateTime.Now;
+                    }
                 }
                 switch (quyen) // hiển thị menu phù hợp với quyền 
                 {
                     case 1: // quản trị
+                        menuBaoCao.Visible = true;
+                        menuTacVu.Enabled = true;
+                        menuBaoCao.Enabled = true;
                         menuNhapHang.Enabled = true;
-                        menuGiaoHang.Enabled = true;
+                        menuQLTK.Visible = true;
                         menuDoiMK.Enabled = true;
-                        menuQLTK.Enabled = true;
-                        menuDangXuat.Enabled = true;
+                        menuTaoTK.Enabled = true;
+                        menuQLNV.Visible = true;
+                        menuDoiMK.Visible = false;
                         break;
                     case 2: // nhân viên
+                        menuDoiMK.Visible = true;
+                        menuNhapHang.Enabled = true;
+                        menuTacVu.Enabled = true;
+                        menuBaoCao.Visible = true;
+                        menuBaoCao.Enabled = false;
                         menuDoiMK.Enabled = true;
+                        menuBaoCao.Visible = false;
                         break;
                     default:
                         break;
@@ -132,15 +155,12 @@ namespace QuanLiVLXD
 
         private void menuDangXuat_Click(object sender, EventArgs e)
         {
-            //frmMain n = new frmMain();
-            //n.ShowDialog();
-            MoFormMain(new frmMain());
+            this.Refresh();
+            //Refresh lại form đang đứng
             // Đóng các form đang mở (nếu có)
-            //foreach (Form f in this.MdiChildren)
-            //{
-            //if (!f.IsDisposed)
-            //f.Close();
-            //}
+            this.Hide();
+            frmMain f = new frmMain();
+            f.Show();
             // Gán lại trạng thái đăng nhập = false
             bDangNhap = false;
             HienThiMenu();
@@ -154,32 +174,15 @@ namespace QuanLiVLXD
         {
             MoForm(new frmTaoTaiKhoan());
         }
-        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoForm(new frmNhaCungCap());
-        }
+
         private void menuKhachHang_Click(object sender, EventArgs e)
         {
             MoForm(new frmKhachHang());
-        }
-        private void loạiHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoForm(new frmLoaiHang());
-        }
-
-        private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoForm(new frmHangHoa());
         }
 
         private void menuGiaoHang_Click(object sender, EventArgs e)
         {
             MoForm(new frmXuatHang());
-        }
-
-        private void khoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MoForm(new frmKho());
         }
 
         private void menuBCK_Click(object sender, EventArgs e)
@@ -220,6 +223,40 @@ namespace QuanLiVLXD
         private void menuQLNV_Click(object sender, EventArgs e)
         {
             MoForm(new frmNhanVien());
+        }
+
+        private void menuNCC_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmNhaCungCap());
+        }
+
+        private void menuLoaiHang_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmLoaiHang());
+        }
+
+        private void menuHangHoa_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmHangHoa());
+        }
+
+        private void menuKho_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmKho());
+        }
+
+        private void menuHelp_Click(object sender, EventArgs e)
+        {
+            MoForm(new frmTroGiup());
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult traloi = MessageBox.Show("Bạn có muốn đóng chương trình", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+                Application.Exit();
+            else if (traloi == DialogResult.Cancel)
+                e.Cancel = true;
         }
     }
 }

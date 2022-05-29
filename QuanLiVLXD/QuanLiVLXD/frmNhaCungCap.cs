@@ -68,7 +68,7 @@ namespace QuanLiVLXD
         private void btnThem_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu có bị bỏ trống
-            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" )
+            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
                 return;
@@ -81,7 +81,7 @@ namespace QuanLiVLXD
             }
             if (txtSDT.Text.Length < 10)
             {
-                MessageBox.Show("Số điện thoại ít nhất 10 số!!!","Thông báo");
+                MessageBox.Show("Số điện thoại ít nhất 10 số!!!", "Thông báo");
                 return;
             }
             // Kiểm tra mã hàng hóa có bị trùng không
@@ -109,7 +109,7 @@ namespace QuanLiVLXD
         private void btnSua_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu có bị bỏ trống
-            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" )
+            if (txtMaNCC.Text == "" || txtTenNCC.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
                 return;
@@ -122,7 +122,7 @@ namespace QuanLiVLXD
             }
             if (txtSDT.Text.Length < 10)
             {
-                MessageBox.Show("Số điện thoại ít nhất 10 số!!!","Thông báo");
+                MessageBox.Show("Số điện thoại ít nhất 10 số!!!", "Thông báo");
                 return;
             }
             // Kiểm tra mã hàng hóa có bị trùng không
@@ -146,28 +146,40 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã sửa NCC.");
         }
-
+        public DTO_TaiKhoan TaiKhoan;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã NCC có tồn tại không
-            if (BUS_NCC.TimNCCTheoMa(txtMaNCC.Text) == null)
-            {
-                MessageBox.Show("Mã NCC không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_NCC
-            DTO_NCC ncc = new DTO_NCC();
-            ncc.MaNCC1 = txtMaNCC.Text;
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                        // Kiểm tra mã NCC có tồn tại không
+                        if (BUS_NCC.TimNCCTheoMa(txtMaNCC.Text) == null)
+                        {
+                            MessageBox.Show("Mã NCC không tồn tại!");
+                            return;
+                        }
+                        // Gán dữ liệu vào kiểu DTO_NCC
+                        DTO_NCC ncc = new DTO_NCC();
+                        ncc.MaNCC1 = txtMaNCC.Text;
 
-            // Thực hiện xóa 
-            if (BUS_NCC.XoaNCC(ncc) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa NCC.");
+                        // Thực hiện xóa 
+                        if (BUS_NCC.XoaNCC(ncc) == false)
+                        {
+                            MessageBox.Show("Không xóa được.");
+                            return;
+                        }
+                        HienThiLenDataGrid();
+                        MessageBox.Show("Đã xóa NCC.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
         }
+    }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
@@ -188,5 +200,15 @@ namespace QuanLiVLXD
                 dgDSNCC.DataSource = kq;
             }
         }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Không được nhập chữ!!");
+            }
+        }
+    
     }
 }

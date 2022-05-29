@@ -22,5 +22,13 @@ namespace BUS
         {
             return DAO_CTHDXUAT.TimTheoMa(ma);
         }
+        public static bool CapNhatCTHDX(DTO_CTHDXUAT x)
+        {
+            return DAO_CTHDXUAT.CapNhatCTHDX(x);
+        }
+        public static bool XoaCTHDX(DTO_CTHDXUAT x)
+        {
+            return DAO_CTHDXUAT.XoaCTHDX(x);
+        }
     }
 }

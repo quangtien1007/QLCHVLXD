@@ -20,7 +20,7 @@ namespace QuanLiVLXD
         {
             InitializeComponent();
         }
-        private string SoHD, NCC, NhanVien , NgayLap;
+        private string SoHD, NCC, NhanVien, NgayLap;
         public frmCTHDNhap(string SoHD, string NCC, string NgayLap, string NhanVien)
         {
             InitializeComponent();
@@ -98,8 +98,7 @@ namespace QuanLiVLXD
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            ExportToExcel(dgDSCTHDN, @"D:\LTQL\", "ThongKeKhachHang");
-            MessageBox.Show("Đã xuất file Excel thành công ");
+
         }
 
         private void frmCTHDNhap_Load(object sender, EventArgs e)
@@ -114,6 +113,7 @@ namespace QuanLiVLXD
             txtNCC.Text = this.NCC;
             dtpNgayLap.Text = this.NgayLap;
             txtNV.Text = this.NhanVien;
+            SetHeaderText();
         }
 
         private void cbHH1_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,9 +134,168 @@ namespace QuanLiVLXD
             txtThanhTien.Text = tong.ToString();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmMain f = new frmMain();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu có bị bỏ trống
+            if (txtIDKho.Text == "" || txtIDN.Text == "" || txtDonGia.Text == "" || txtSoHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
+                return;
+            }
+            // Kiểm tra mã loại hàng có độ dài chuỗi hợp lệ hay không
+            if (txtIDN.Text.Length > 3)
+            {
+                MessageBox.Show("Mã loại hàng tối đa 3 ký tự!");
+                return;
+            }
+            // Kiểm tra mã khách hàng có bị trùng không
+            if (BUS_CTHDN.TimTheoMa(txtIDN.Text) != null)
+            {
+                MessageBox.Show("Mã đã tồn tại! Vui lòng chọn mã khác.");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_KhachHang
+            DTO_CTHDN h = new DTO_CTHDN();
+            h.ID1 = int.Parse(txtIDN.Text);
+            h.IDKho1 = int.Parse(txtIDKho.Text);
+            h.MaHH1 = txtMaHH.Text;
+            h.SoHDN1 = txtSoHD.Text;
+            h.SoLuong1 = int.Parse(txtSoLuong.Text);
+            h.ThanhTien1 = int.Parse(txtThanhTien.Text);
+            DTO_Kho k = new DTO_Kho();
+            k.SoLuongKho1 = int.Parse(txtSoLuong.Text);
+            k.MaHH1 = txtMaHH.Text;
+            // Thực hiện thêm
+            if (BUS_CTHDN.ThemCTHDN(h) == false)
+            {
+                MessageBox.Show("Không thêm được.");
+                return;
+            }
+            if (BUS_Kho.nhapkho(k) == false)
+            {
+                MessageBox.Show("Không update được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã thêm.");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu có bị bỏ trống
+            if (txtIDKho.Text == "" || txtIDN.Text == "" || txtDonGia.Text == "" || txtSoHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
+                return;
+            }
+            // Kiểm tra mã có bị trùng không
+            if (BUS_CTHDN.TimTheoMa(txtIDN.Text) == null)
+            {
+                MessageBox.Show("Mã không tồn tại! Vui lòng chọn mã khác.");
+                return;
+            }
+            // Gán dữ liệu vào kiểu DTO_KhachHang
+            DTO_CTHDN h = new DTO_CTHDN();
+            h.ID1 = int.Parse(txtIDN.Text);
+            h.IDKho1 = int.Parse(txtIDKho.Text);
+            h.MaHH1 = txtMaHH.Text;
+            h.SoHDN1 = txtSoHD.Text;
+            h.SoLuong1 = int.Parse(txtSoLuong.Text);
+            h.ThanhTien1 = int.Parse(txtThanhTien.Text);
+            // Thực hiện thêm
+            if (BUS_CTHDN.CapNhatCTHDN(h) == false)
+            {
+                MessageBox.Show("Không sửa được.");
+                return;
+            }
+            HienThiLenDataGrid();
+            MessageBox.Show("Đã sửa.");
+        }
+        private DTO_TaiKhoan TaiKhoan;
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã có tồn tại không
+                    if (BUS_CTHDN.TimTheoMa(txtIDN.Text) == null)
+                    {
+                        MessageBox.Show("Mã không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_CTHDN
+                    DTO_CTHDN x = new DTO_CTHDN();
+                    x.ID1 = int.Parse(txtIDN.Text);
+
+                    // Thực hiện xóa 
+                    if (BUS_CTHDN.XoaCTHDN(x) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
+        }
+    }
+        
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(dgDSCTHDN, @"D:\LTQL\", "CTHDN");
+            MessageBox.Show("Đã xuất file Excel thành công");
+        }
+
+        private void btnInPN_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap f = new frmPhieuNhap(txtNCC.Text, cbHH1.Text, dtpNgayLap.Text, int.Parse(txtSoLuong.Text), int.Parse(txtThanhTien.Text), txtNV.Text, txtNV.Text);
+            this.Hide();
+            f.Show();
+        }
+
+        private void dgDSCTHDN_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            cbHH1.Text = dgDSCTHDN.Rows[i].Cells["TenHH1"].Value.ToString();
+            txtSoLuong.Text = dgDSCTHDN.Rows[i].Cells["SoLuong1"].Value.ToString();
+            txtDVT.Text = dgDSCTHDN.Rows[i].Cells["DVT1"].Value.ToString();
+            txtDonGia.Text = dgDSCTHDN.Rows[i].Cells["DonGia1"].Value.ToString();
+            txtMaHH.Text = dgDSCTHDN.Rows[i].Cells["MaHH1"].Value.ToString();
+            txtDVT.Text = dgDSCTHDN.Rows[i].Cells["DVT1"].Value.ToString();
+            txtThanhTien.Text = dgDSCTHDN.Rows[i].Cells["ThanhTien1"].Value.ToString();
+        }
+        public void SetHeaderText()
+        {
+            dgDSCTHDN.Columns["ID1"].HeaderText = "ID";
+            dgDSCTHDN.Columns["MaHH1"].HeaderText = "Mã HH";
+            dgDSCTHDN.Columns["TenHH1"].HeaderText = "Tên HH";
+            dgDSCTHDN.Columns["SoHDN1"].HeaderText ="Số HĐ";
+            dgDSCTHDN.Columns["SoLuong1"].HeaderText = "Số lượng";
+            dgDSCTHDN.Columns["ThanhTien1"].HeaderText = "Thành tiền";
+            dgDSCTHDN.Columns["IDKho1"].HeaderText = "ID Kho";
+            dgDSCTHDN.Columns["TenNCC1"].HeaderText = "Tên NCC";
+            dgDSCTHDN.Columns["NgayLap1"].HeaderText = "Ngày lập";
+            dgDSCTHDN.Columns["TenNV1"].HeaderText = "Tên NV";
+            dgDSCTHDN.Columns["DonGia1"].HeaderText = "Đơn giá";
+            dgDSCTHDN.Columns["DVT1"].HeaderText = "ĐVT";
+        }
         private void cbHH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtIDN.Text = cbHH.SelectedValue.ToString();
+            txtIDKho.Text = cbHH.SelectedValue.ToString();
         }
 
         private void cbHH1_TextChanged(object sender, EventArgs e)
@@ -148,6 +307,7 @@ namespace QuanLiVLXD
         private void cbHH3_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbHH.Text = cbHH3.SelectedValue.ToString();
+            txtMaHH.Text = cbHH3.SelectedValue.ToString();
         }
     }
 }

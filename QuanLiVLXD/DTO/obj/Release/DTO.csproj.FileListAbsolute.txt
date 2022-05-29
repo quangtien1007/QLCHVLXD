@@ -1,0 +1,6 @@
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\bin\Release\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\bin\Release\DTO.pdb
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Release\DTO.csprojAssemblyReference.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Release\DTO.dll
+D:\LTQL\QLCHVLXD\QLCHVLXD\QuanLiVLXD\DTO\obj\Release\DTO.pdb

@@ -12,6 +12,7 @@ namespace DAO
     public class DAO_NhanVien
     {
         static SqlConnection con;
+
         public static List<DTO_NhanVien> LayNV()
         {
             string sTruyVan = "select * from NHANVIEN";
@@ -49,10 +50,10 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return kq;
         }
-        // Lấy thông tin hàng hóa có mã ma, trả về null nếu không thấy
+        // Lấy thông tin có mã ma, trả về null nếu không thấy
         public static DTO_NhanVien TimNhanVienTheoMa(string ma)
         {
-            string sTruyVan = string.Format(@"SELECT * FROM NHANVIEN WHERE MANV=N'{0}'", ma);
+            string sTruyVan = string.Format(@"SELECT * FROM NHANVIEN WHERE MANV = N'{0}'", ma);
             con = DataProvider.MoKetNoi();
             DataTable dt = DataProvider.TruyVanLayDuLieu(sTruyVan, con);
             if (dt.Rows.Count == 0)

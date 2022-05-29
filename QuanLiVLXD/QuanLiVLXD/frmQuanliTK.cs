@@ -67,16 +67,28 @@ namespace QuanLiVLXD
             dgDSTK.Columns["IQuyen"].HeaderText = "Quyền";
             dgDSTK.Columns["IQuyen"].Width = 200;
         }
+        public String GetMD5(string txt)
+        {
+            String str = "";
+            Byte[] buffer = System.Text.Encoding.UTF8.GetBytes(txt);
+            System.Security.Cryptography.MD5CryptoServiceProvider md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            buffer = md5.ComputeHash(buffer);
+            foreach (Byte b in buffer)
+            {
+                str += b.ToString("x2");
+            }
+            return str;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (txtTaiKhoan.Text == "" || txtMatKhau.Text == "")
             {
-                MessageBox.Show("Ten dang nhap va tai khoan khong duoc bo trong!!!");
+                MessageBox.Show("Tên đăng nhập và mật khẩu không được bỏ trống!!!");
                 return;
             }
             DTO_TaiKhoan tk = new DTO_TaiKhoan();
             tk.STen = txtTaiKhoan.Text;
-            tk.SMatKhau = txtMatKhau.Text;
+            tk.SMatKhau = GetMD5(txtMatKhau.Text);
             tk.IQuyen = int.Parse(txtQuyen.Text);
             if (BUS_TaiKhoan.ThemTaiKhoan(tk) == false)
             {
@@ -84,7 +96,7 @@ namespace QuanLiVLXD
                 return;
             }
             HienThiDSTKLenDTGV();
-            MessageBox.Show("Đã thêm nhân viên.","Thông báo");
+            MessageBox.Show("Đã thêm tài khoản.","Thông báo");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -100,7 +112,7 @@ namespace QuanLiVLXD
                 return;
             }
             HienThiDSTKLenDTGV();
-            MessageBox.Show("Đã xóa nhân viên.");
+            MessageBox.Show("Đã xóa tài khoản.");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -117,7 +129,7 @@ namespace QuanLiVLXD
                 return;
             }
             HienThiDSTKLenDTGV();
-            MessageBox.Show("Đã sửa nhân viên.");
+            MessageBox.Show("Đã sửa tài khoản.");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -131,6 +143,11 @@ namespace QuanLiVLXD
             txtTaiKhoan.Text = dgDSTK.Rows[i].Cells["STen"].Value.ToString();
             txtMatKhau.Text = dgDSTK.Rows[i].Cells["SMatKhau"].Value.ToString();
             txtQuyen.Text = dgDSTK.Rows[i].Cells["IQuyen"].Value.ToString();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

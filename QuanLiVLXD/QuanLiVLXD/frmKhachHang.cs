@@ -27,14 +27,14 @@ namespace QuanLiVLXD
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
-            HienThiLenDataGrid(); 
+            HienThiLenDataGrid();
             SetHeaderText();
             ColorDataGrid();
         }
         public void SetHeaderText()
         {
             dgDSKH.Columns["MaKH1"].HeaderText = "Mã khách hàng";
-            dgDSKH.Columns["MaKH1"].Width= 350;
+            dgDSKH.Columns["MaKH1"].Width = 350;
             dgDSKH.Columns["TenKH1"].HeaderText = "Tên khách hàng";
             dgDSKH.Columns["TenKH1"].Width = 400;
             dgDSKH.Columns["DiaChi1"].HeaderText = "Địa chỉ";
@@ -147,28 +147,40 @@ namespace QuanLiVLXD
             HienThiLenDataGrid();
             MessageBox.Show("Đã sửa khách hàng.");
         }
-
+        public DTO_TaiKhoan TaiKhoan;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra mã NCC có tồn tại không
-            if (BUS_KhachHang.TimKhachHangTheoMa(txtMaKH.Text) == null)
-            {
-                MessageBox.Show("Mã khách hàng không tồn tại!");
-                return;
-            }
-            // Gán dữ liệu vào kiểu DTO_NCC
-            DTO_KhachHang kh = new DTO_KhachHang();
-            kh.MaKH1 = txtMaKH.Text;
+            int quyen;
+            if (TaiKhoan == null)
+                quyen = 0;
+            else
+                quyen = TaiKhoan.IQuyen;
+            switch (quyen) {
+                case 1:
+                    // Kiểm tra mã NCC có tồn tại không
+                    if (BUS_KhachHang.TimKhachHangTheoMa(txtMaKH.Text) == null)
+                    {
+                        MessageBox.Show("Mã khách hàng không tồn tại!");
+                        return;
+                    }
+                    // Gán dữ liệu vào kiểu DTO_NCC
+                    DTO_KhachHang kh = new DTO_KhachHang();
+                    kh.MaKH1 = txtMaKH.Text;
 
-            // Thực hiện xóa 
-            if (BUS_KhachHang.XoaKhachHang(kh) == false)
-            {
-                MessageBox.Show("Không xóa được.");
-                return;
-            }
-            HienThiLenDataGrid();
-            MessageBox.Show("Đã xóa khách hàng.");
+                    // Thực hiện xóa 
+                    if (BUS_KhachHang.XoaKhachHang(kh) == false)
+                    {
+                        MessageBox.Show("Không xóa được.");
+                        return;
+                    }
+                    HienThiLenDataGrid();
+                    MessageBox.Show("Đã xóa khách hàng.");
+                    break;
+                case 2:
+                    btnXoa.Enabled = false;
+                    break;
         }
+    }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
